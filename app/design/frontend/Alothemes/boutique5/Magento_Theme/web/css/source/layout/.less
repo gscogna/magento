@@ -1,0 +1,274 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    //LAYOUT
+    .page-layout-1column {
+        .product.media.product-img-box {
+            width: 50%;
+            display: block;
+            align-items: stretch;
+            flex:none;
+            max-width: none;     
+        }
+        .product-info-main.product-shop {
+            width: 50%;     
+            flex:none;
+            max-width: none;       
+        }
+        .modal-popup.modals-quickview {
+            .product.media.product-img-box{
+                width:40%;
+                flex: none;
+                max-width: none;
+                padding-left: 0;
+            }
+            .product-info-main.product-shop{
+                width:60%;
+                flex: none;
+                max-width: none;
+                height:auto !important;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+    }  
+    .page-layout-2columns-left {
+        .columns {
+            .column.main {
+                float: right;
+            }
+            .sidebar {
+                float: left;
+            }
+        }   
+    }
+    .page-layout-2columns-right {
+        .columns {
+            .column.main {
+                float: left;
+            }
+            .sidebar {
+                float: left;
+            }
+        }   
+    }
+    .page-layout-2columns-left,.page-layout-2columns-right {
+        .columns {
+            margin-left: -15px;
+            margin-right: -15px;           
+            .column.main,.sidebar {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .column.main {
+                width: calc(~"100% - 300px");   
+                flex: none;             
+    		}
+    		.sidebar {
+                width: 300px;  
+                flex: none;             
+    		}
+        }
+        .modals-quickview {
+            .columns {
+                .column.main {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .page-layout-2columns-left,.page-layout-2columns-right,.page-layout-3columns {
+        .modals-quickview {
+            .product-info-main {
+                width: 50%;
+            }
+        }
+        .product.media {
+            width: 50%;
+            display: block;
+            align-items: stretch;
+        }
+    }  
+}
+
+
+/* responsive */
+@screen__xxs: 320px;
+@screen__xs-m: 360px;
+@screen__xs: 480px;
+@screen__ss: 576px;
+@screen__s: 640px;
+@screen__m: 768px;
+@screen__xm: 992px;
+@screen__l: 1024px;
+@screen__xl-m: 1200px;
+
+& when (@media-common = true) {   
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+         //layout
+         .page-layout-2columns-left {
+            .bundle-options-container {
+                .block-bundle-summary, .bundle-options-wrapper{
+                    width:100% !important;
+                    float:none;
+                }
+            }
+        }    
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+            //layout
+         .page-layout-2columns-left,
+         .page-layout-2columns-right {
+             .columns {
+                 .column.main {
+                     width: 100%;
+                     float: none;
+                 }
+                 .sidebar {
+                     width: 100%;
+                     float: none;                   
+                 }
+             }
+         } 
+       .page-layout-2columns-left ,.page-layout-2columns-right,.page-layout-3columns{
+             .product.media.product-img-box {
+                 width: 100%;
+                 flex: 0 0 100%;
+                 max-width: 100%;
+             }
+             .product-info-main.product-shop {
+                 width: 100%;
+                 flex: 0 0 100%;
+                 max-width: 100%;
+                 margin-top: 30px;
+             }
+         }
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .page-layout-1column{
+            .product.media.product-img-box {
+                width: 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            .product-info-main.product-shop {
+                width: 100%;
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-top: 30px;
+            }
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+      
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {
+    .rtl {
+        //layout
+       &.page-layout-2columns-left {
+            .columns {
+                .column.main{
+                    float: left;
+                }
+                .sidebar{
+                    float: right;
+                    clear: right;
+                }
+            }
+        }
+        &.page-layout-1column {
+                .modal-popup.modals-quickview {
+                    .product.media.product-img-box{
+                        padding-left: 15px;
+                        padding-right: 0;
+                    }
+                }
+        }
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

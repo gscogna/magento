@@ -1,0 +1,120 @@
+& when (@media-common = true) {
+  .stickyCart {
+    position: fixed;
+    background: #000;
+    width: 100%;
+    bottom: 0;
+    height: 90px;
+    z-index: 99;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    .stickyChild {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90px;
+      #parentQtySticky {
+        height: 43px;
+      }
+      #timerSticky {
+        position: relative;
+      }
+      .clSticky {
+        padding: 0 10px 0 10px;
+        .quantity {
+          text-align: left;
+          margin-right: 0;
+          position: relative;
+          border: 1px solid #999;
+          .qty {
+            width: calc(~"100% - 20px");
+            border: 0;
+            height: 40px;
+            padding: 0;
+            font-weight: 700;
+            font-size: 14px;
+            text-align: center;
+          }
+        }
+        .stickyProductName {
+          color: #eee;
+        }
+        .imgBorder {
+          width: 68px;
+          height: 68px;
+          border-radius: 50%;
+          border: solid 1px #eee;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .borderImg {
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+            overflow: hidden;
+            .stickyImg {
+              width: 100%;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+      #btnSticky {
+        background-color: transparent;
+        min-height: 42px;
+        border-color: #fff;
+      }
+      #btnSticky:hover {
+        background-color: #b59677;
+        color: #fff;
+      }
+      .contentShow {
+        #btnSticky {
+          color: #fff;
+          border: 1px solid #ccc;
+        }
+      }
+    }
+    .btn-plus {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      .items {
+        background: transparent;
+        color: #fff;
+        border: none;
+        width: 100%;
+        .fa {
+          font-family: @icons__font-name;
+          font-style: normal;
+          font-size: 9px;
+          &.fa-angle-up {
+            &:before {
+              content: "\e61c";
+            }
+          }
+          &.fa-angle-down {
+            &:before {
+              content: "\e60f";
+            }
+          }
+        }
+      }
+    }
+    .quantity input:focus {
+      outline: 0;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .contentHide {
+      display: none;
+    }
+    .contentShow #btnSticky {
+      width: 100%;
+    }
+  }
+}

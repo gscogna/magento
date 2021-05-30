@@ -1,0 +1,15 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1622303914;s:6:"expire";i:1622307514;s:4:"tags";s:43:"09f_STORE,09f_CMS_B,09f_BLOCK_HTML,09f_MAGE";}
+<div class="footer-copyright">
+	<div class="copyright-content">
+		<div class="main1">
+			<span class="copyright">Copyright © 2013-present Magento, Inc. All rights reserved.</span>
+		</div>	
+		<div class="main2">
+			<ul class="footer-menu">
+<li class="menu-item"><a href="http://localhost/magento/privacy-cookie/">Privacy &amp; Cookies</a></li>
+<li class="menu-item"><a href="http://localhost/magento/terms-conditions/">Ts&amp;Cs</a></li>
+<li class="menu-item"><a href="http://localhost/magento/contact/">Accessibility</a></li>
+</ul>		</div>
+	</div>
+	<a href="#" id="backtotop"><span class="fa fa-angle-up"></span><span class="back-to-top">Back to Top</span></a>
+</div>

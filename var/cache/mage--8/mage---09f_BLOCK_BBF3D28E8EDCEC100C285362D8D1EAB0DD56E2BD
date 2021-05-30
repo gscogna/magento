@@ -1,0 +1,21 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1622303913;s:6:"expire";i:1622390313;s:4:"tags";s:71:"09f_BLOCK_HTML,09f_MAGEPOW_CATEGORIES,09f_MAGEPOW_CATEGORIES_0,09f_MAGE";}
+<div class="magepow-categories alo-content-60b264a9c2bc5" >    
+            <ul class="categories grid"
+                            data-padding='0'
+                            data-responsive='[["1"],{"360":"1"},{"479":"1"},{"575":"1"},{"767":"1"},{"991":"1"},{"1199":"1"},{"1478":"1"},{"1919":"1"},{"1920":"1"}]'
+              
+            >
+                    </ul>
+        <!--  -->
+    </div>
+
+<script type="text/javascript">
+    require([
+        'jquery',
+        'magiccart/slick',
+        'alothemes',
+        ], function($, slick, alothemes){
+            var categories  = $('.alo-content-60b264a9c2bc5 .categories');
+            if(categories.length) $('head').append(magicproduct(categories, '.item'));
+    });
+</script>

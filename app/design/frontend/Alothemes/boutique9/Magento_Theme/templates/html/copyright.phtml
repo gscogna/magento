@@ -1,0 +1,32 @@
+<?php
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+
+?>
+<div class="footer-copyright">
+	<div class="copyright-content">
+		<div class="main1">
+			<span class="copyright"><?php /* @escapeNotVerified */ echo preg_replace('/yyyy/', date('Y'), $block->getCopyright()); ?></span>
+		</div>	
+		<div class="main2 toggle-menu">
+			<div class="toggle-tab">
+				<span class="title-toggle">Pages</span>
+			</div>
+			<div class="toggle-content">
+				<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('block-custom-menu')->toHtml(); ?>
+			</div>
+		</div>
+		<div class="main3 toggle-menu">
+			<div class="toggle-tab">
+				<span class="title-toggle">Social</span>
+			</div>
+			<div class="toggle-content">
+				<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('block-social')->toHtml();?>
+			</div>
+		</div>
+	</div>
+	<a href="#" id="backtotop"><span class="fa fa-angle-up"></span><span class="back-to-top"><?php echo __('Back to Top')?></span></a>
+</div>

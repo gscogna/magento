@@ -1,0 +1,22 @@
+<?php
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+	$customerSession = $objectManager->get('Magento\Customer\Model\Session');
+	$isLoggedIn = $customerSession->isLoggedIn();
+	$msg = $isLoggedIn ? __('Welcome') .', '. $customerSession->getCustomer()->getName() : $this->getWelcome();
+?>
+<div class="dropdown-link">
+	<?php if( $isLoggedIn ) { ?>
+	    <div class="logout">
+			<a href="<?php echo $this->getUrl('customer/account/logout'); ?>" title="<?php echo __('Sign Out') ?>"><?php echo __('Sign Out') ?>
+			</a>
+		</div>
+	 <?php } else { ?>
+		<div class="login">
+		  <a href="<?php echo $this->getUrl('customer/account/login'); ?>" title="<?php echo __('Sign In') ?>"><?php echo __('Sign In') ?>
+		  </a>
+		  <span class="or"><?php echo __('Or')?></span>
+		  <a href="<?php echo $this->getUrl('customer/account/create/'); ?>" title="<?php echo __('Register') ?>"><?php echo __('Register') ?>
+		  </a>
+		</div>
+	 <?php }  ?>
+</div>

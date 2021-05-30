@@ -1,0 +1,53 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog related posts template
+ *
+ * @var $block \Magefan\Blog\Block\Post\View\RelatedPosts
+ */
+?>
+
+<?php if ($block->displayPosts()) { ?>
+    <?php $_postCollection = $block->getPostCollection(); ?>
+    <?php if ($_postCollection->count()) { ?>
+    <div class="block related related-post">
+        <div class="block-title title">
+            <strong id="block-relatedposts-heading" role="heading" aria-level="2">
+                <?php echo __('Related Articles') ?>
+            </strong>
+        </div>
+        <ol class="magicslider block-content autoplay" data-swipe-to-slide="true" data-slides-to-show="3" data-rows="1" data-responsive='[{"breakpoint": 1921, "settings": {"slidesToShow": 3}}, {"breakpoint": 1920, "settings": {"slidesToShow": 3}}, {"breakpoint": 1480, "settings": {"slidesToShow": 3}}, {"breakpoint": 1200, "settings": {"slidesToShow": 3}}, {"breakpoint": 992, "settings": {"slidesToShow": 3}}, {"breakpoint": 768, "settings": {"slidesToShow": 2}}, {"breakpoint": 576, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 2}}, {"breakpoint": 361, "settings": {"slidesToShow": 1}}, {"breakpoint": 1, "settings": {"slidesToShow": 1}}]' data-vertical-swiping="true" data-vertical="false" data-padding="15" data-infinite="true" data-dots="false" data-autoplay-speed="3000" data-arrows="true" data-autoplay="false">
+            <?php foreach ($_postCollection as $_post) { ?>
+                <?php
+                    $_postUrl = $_post->getPostUrl();
+                    $_postName = $_post->getTitle();
+                ?>
+                <li class="item">
+                    <?php if ($featuredImage = $_post->getFeaturedImage()) { ?>
+                    <div class="post-ftimg-hld blog-image al-style-2 image-container">
+                        <a href="<?php echo $_postUrl; ?>" title="<?php echo $_postName ?>">
+                            <img src="<?php echo $featuredImage ?>" alt="<?php echo $_postName ?>" />
+                        </a>
+                    </div>
+                    <?php } ?>
+                    <a class="post-item-link"
+                       href="<?php echo $_post->getPostUrl() ?>">
+                        <?php echo $block->escapeHtml($_post->getTitle()); ?>
+                    </a>
+                    <div class="item post-posed-date">
+                        <span class="label"><em class="fa fa-calendar"></em></span>
+                        <span class="value"><?php echo date('M d', strtotime($_post->getData('publish_time'))); //'F d, Y' ?></span>
+                    </div>
+                </li>
+            <?php } ?>
+        </ol>
+    </div>
+    <?php } ?>
+<?php } ?>

@@ -1,0 +1,214 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    .page-about{
+        text-align: center;
+        .brand-info{
+            margin-top: 80px;
+            margin-bottom: 55px;
+            .logo{
+                float: none;
+                margin: 0;
+                max-width: none;
+                img{
+                    display: inline-block;
+                }
+            }
+            img{
+                margin:0 auto;
+            }
+            .text{
+                font-style: italic;
+                margin: 35px 0;
+                color: #555;
+            }
+        }
+        .slick-slide {
+            img{
+                display: inline-block;
+            }
+        }
+        .brand-cate{
+            padding: 100px 0;
+            background: #fafafa;
+            .title{
+                font-size: 2rem;
+                color: #000;
+                font-weight: 600;
+                margin-top: 29px;
+                margin-bottom: 13px;
+            }
+            .sub-title{
+                font-size: 1.3rem;
+                color:#555;
+                line-height: 23px;
+                margin-bottom: 0;
+            }
+        }
+        .brand-people{
+            margin-top: 95px;
+            margin-bottom: 60px;
+            .cms-title{
+                margin-bottom: 54px;
+                .text{
+                    font-style:italic;
+                }
+            }
+            .name{
+                font-size: 1.6rem;
+                font-weight: 600;
+                color:@black;
+                margin-top: 20px;
+            }
+            ul{
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                li{
+                    margin-bottom: 0;
+                    list-style-type: none;
+                    &:not(:last-child){
+                        margin-right: 10px;
+                    }
+                    a{
+                        font-size: 1.6rem;
+                        color:#888;
+                        &:hover{
+                            color:@black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* responsive */
+& when (@media-common = true) {       
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+        
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+       
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .page-about {
+            .brand-info {
+                .text{
+                    br{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+        .page-about {
+            .brand-info{
+                margin-top: 60px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {  
+    .rtl {
+        .page-about {
+            .brand-people {
+                ul {
+                    li:not(:last-child){
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+          
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

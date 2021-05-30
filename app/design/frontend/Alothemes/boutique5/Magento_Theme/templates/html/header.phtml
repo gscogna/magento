@@ -1,0 +1,72 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+?>
+<?php 
+$_lazyHelper 		= $this->helper('Magiccart\Alothemes\Helper\Lazyload');
+?>
+<header class="page-header alothemes">
+    <div class="header menu-mobile header-sticker">
+		<div class="header-top">
+			<div class="container-fluid">
+				<div class="row">
+					<?php echo $block->getLayout()->createBlock(\Magento\Cms\Block\Block::class)->setBlockId('static_block_header_top')->toHtml();?>
+				</div>
+			</div>
+		</div>
+		<div class="header-content">
+			<div class="container">
+				<div class="dflex">
+					<div class="content-cart _config">
+						<div class="tool-header">
+							<div class="header-top-link">
+								<?php echo $this->getChildHtml('store_language'); ?>
+								<?php echo $this->getChildHtml('currency'); ?>
+							</div>
+						</div>
+					</div>
+					<div class="content-logo">
+						<div class="header-logo">
+							<?php echo $_lazyHelper->notLazyloadImage($this->getChildHtml('logo')); ?>
+						</div>
+					</div>
+					<div class="content-cart">
+						<div class="tool-header">
+							<div class="content-icon">
+								<div class="search-area header-search">
+									<?php echo $this->getChildHtml('top.search'); ?>
+								</div>
+								<div class="header-account">
+									<div class="toggle-tab">
+										<span class="header-icon user"></span>
+									</div>
+									<div class="toggle-content">
+										<?php echo $this->getChildHtml('header.links'); ?>
+									</div>
+								</div>
+								<?php echo $this->getChildHtml('minicart'); ?>
+								<span data-action="toggle-topmenu" class="topmenu-close"></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom">
+			<div class="container">
+				<div class="header-right-menu">
+					<?php echo $this->getChildHtml('navigation.sections'); ?>
+					<?php echo $this->getChildHtml('catalog.topnav'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

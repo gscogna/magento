@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="head.additional">
+            <block class="Magiccart\Alothemes\Block\Product\View" name="alo.product.config" template="Magento_Catalog::product/view/config.phtml" />
+        </referenceBlock>
+        <referenceContainer name="sidebar.additional">
+            <referenceBlock name="wishlist_sidebar" remove="true"/>
+            <referenceBlock name="catalog.compare.sidebar" remove="true"/>
+            <referenceBlock name="sale.reorder.sidebar" remove="true"/>
+        </referenceContainer>
+        <move element="page.main.title" destination="product.info.main" before="-"/>
+        <move element="product.info.media" destination="product.inner" before="-"/>
+        <move element="product.info.main" destination="product.inner" after="product.info.media"/>
+        <!-- class product-img-box is require -->
+        <referenceContainer name="product.info.media" htmlTag="div" htmlClass="product media product-img-box col-md-5 col-sm-5 col-12" />
+        <referenceContainer name="product.info.main" htmlTag="div" htmlClass="product-info-main product-shop col-md-7 col-sm-7 col-12" >
+            <container name="product.shop.content" htmlTag="div" htmlClass="product-shop-content clearfix" />
+        </referenceContainer>
+        <referenceContainer name="content">
+            <container name="product.view" htmlTag="div" htmlClass="product-view" before="-">
+                <container name="product.inner" htmlTag="div" htmlClass="row" before="-" />
+            </container>
+        </referenceContainer>
+    </body>
+</page>

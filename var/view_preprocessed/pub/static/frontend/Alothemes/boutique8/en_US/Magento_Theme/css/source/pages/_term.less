@@ -1,0 +1,169 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    .terms-condition,.return-exchange,
+    .shipping-delivery,.privacy_policy{
+        h2{
+            font-size: 2rem;
+            color:@black;
+        }
+        h3{
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color:@black;
+        }
+        p+h3{
+            margin-top: 30px;
+        }      
+        p{
+            margin-bottom: 15px;
+        }
+    }
+    .cms-privacy-cookie{
+        .privacy-policy{
+            line-height:25px;
+            h2{
+                color:@text-hover;
+                margin:30px 0 10px;
+            }
+            table{
+                th,td{
+                    border-width:2px;
+                    border-style:solid;
+                    border-color:#dddddd;
+                }
+                th{
+                    font-weight:600;
+                    color:@text-hover;
+                }
+            }
+        }
+    }
+}
+
+
+/* responsive */
+@screen__xxs: 320px;
+@screen__xs-m: 360px;
+@screen__xs: 480px;
+@screen__ss: 576px;
+@screen__s: 640px;
+@screen__m: 768px;
+@screen__xm: 992px;
+@screen__l: 1024px;
+@screen__xl-m: 1200px;
+
+& when (@media-common = true) {       
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+       
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+             
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+        .terms-condition,.return-exchange,
+        .shipping-delivery,.privacy_policy{
+            h2{
+                font-size: 2rem;
+            }
+            h3{
+                font-size: 1.8rem;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {
+  
+    .rtl {
+        
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

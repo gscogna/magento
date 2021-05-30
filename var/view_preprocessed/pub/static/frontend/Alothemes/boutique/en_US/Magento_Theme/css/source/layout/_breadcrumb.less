@@ -1,0 +1,237 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    .breadcrumbs {
+        padding-top: 23px;      
+        margin-bottom: 30px;
+        text-align: left;
+        position: relative;
+        .pagecrumbs-title {
+            display: none;
+        	font-size: 2.0rem;
+        	font-weight: 700;
+        	text-transform: uppercase;
+        	color: @black;
+        	margin-bottom: 27px;
+        }
+        .items{
+            .dflex;
+            align-items: baseline;
+            padding-bottom: 10px;
+            margin-bottom: -10px;
+            white-space: nowrap; 
+        }
+        li {
+        	color:#000;
+            display: inline-block;           
+            a, strong {
+                font-size: @body-font-size;
+            }
+            a { 
+                color: #555;
+                text-decoration: none;
+                display: inline-block;
+            }  
+            strong{
+                font-weight: 400;
+            } 
+            &.home{
+                a:hover{
+                    color: @base-color;
+                }
+            }        
+            &:not(:last-child) {
+            	&:after {
+                    content: "\f105";
+            		font-family: @fontawesome;
+                    margin: 0 10px;
+                    font-size: 1.4rem;
+                    color:#555;
+                }
+            }
+            &:last-child{
+                overflow: hidden;
+                white-space: nowrap; 
+                text-overflow: ellipsis;
+                flex: 1;
+            }
+        }
+    }
+    .cms-static-header {
+        position:relative;
+        margin-top:20px;
+        .cms-content{
+            position:absolute;
+            top:50%;
+            .lateY-transform(@y: -50%);
+            left:0;
+            right:0;
+            .dflex;
+            justify-content:space-around;
+            align-items:center;
+            color:@white;
+            .title{
+                font-size:1.8rem;
+                text-transform:uppercase;
+                font-weight:500;
+            }
+            .action{
+                &:extend(.button-decor all);
+                color: @white;
+                border-color: @white;
+                padding: 0 32px;
+            }
+        }
+    } 
+}
+
+
+/* responsive */
+
+& when (@media-common = true) {       
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .cms-static-header {
+            background-image:url('../images/alothemes/cms-img-demo1-3.jpg');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size:cover;
+            padding:40px 0;
+            .cms-img{
+                opacity:0;
+                visibility:hidden;
+            }
+            .cms-content{
+                .title{
+                    margin-bottom:10px;
+                    padding:0 10px;
+                    text-align:center;
+                }
+            }
+        }
+           
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .cms-static-header {
+            padding: 60px 0;
+            .cms-content{
+                .title{
+                    font-size:1.4rem;
+                }
+            }
+        }
+             
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+        .breadcrumbs{
+            li {
+                a,strong{
+                    font-size: 1.3rem;
+                }
+                &:not(:last-child):after{
+                    margin: 0 10px;
+                }
+            }
+       }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {   
+    .rtl {
+        .breadcrumbs{                
+            li{
+                &:not(:last-child){
+                     &:after{
+                        content: "\f104";
+                     }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

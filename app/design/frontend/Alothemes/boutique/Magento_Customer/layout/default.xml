@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @copyright Copyright (c) 2014 X.commerce, Inc. (http://www.magentocommerce.com)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>	  
+        <referenceBlock name="links.header">
+             <block class="Magento\Customer\Block\Account\Link" name="my-account-link" as="customer-menu-account" before="-">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">My Account</argument>
+                    <argument name="class" xsi:type="string">account</argument>
+                </arguments>
+            </block>
+            <block class="Magento\Wishlist\Block\Link" name="wish-list-link" after="my-account-link">
+				<arguments>
+					<argument name="label" xsi:type="string" translate="true">My Wishlist</argument>
+					<argument name="class" xsi:type="string">mywishlist</argument>
+				</arguments>
+			</block>
+            <block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Register</argument>
+                    <argument name="class" xsi:type="string">register</argument>
+                </arguments>
+            </block>
+        </referenceBlock> 
+        <referenceBlock name="my-link1" remove="true" />
+    </body>
+</page>

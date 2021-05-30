@@ -1,0 +1,136 @@
+    /*
+    Flaticon icon font: Flaticon
+    Creation date: 24/03/2020 09:46
+    */
+
+    @font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff2") format("woff2"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+    .fi:before{
+        display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+    }
+
+    .flaticon-shopping-bag:before { content: "\f100"; }
+.flaticon-smartphone-call:before { content: "\f101"; }
+.flaticon-mail:before { content: "\f102"; }
+.flaticon-search:before { content: "\f103"; }
+.flaticon-magnifying-glass:before { content: "\f104"; }
+.flaticon-loupe:before { content: "\f105"; }
+.flaticon-loupe-1:before { content: "\f106"; }
+.flaticon-checked:before { content: "\f107"; }
+.flaticon-tick:before { content: "\f108"; }
+.flaticon-checked-1:before { content: "\f109"; }
+.flaticon-checked-2:before { content: "\f10a"; }
+.flaticon-tick-1:before { content: "\f10b"; }
+.flaticon-check:before { content: "\f10c"; }
+.flaticon-icon-61222:before { content: "\f10d"; }
+.flaticon-user:before { content: "\f10e"; }
+.flaticon-user-1:before { content: "\f10f"; }
+.flaticon-user-2:before { content: "\f110"; }
+.flaticon-heart:before { content: "\f111"; }
+.flaticon-heart-1:before { content: "\f112"; }
+.flaticon-star-1:before { content: "\f113"; }
+.flaticon-star-2:before { content: "\f114"; }
+.flaticon-minus-symbol:before { content: "\f115"; }
+.flaticon-substract:before { content: "\f116"; }
+.flaticon-icon-149689:before { content: "\f117"; }
+.flaticon-minus:before { content: "\f118"; }
+.flaticon-plus:before { content: "\f119"; }
+.flaticon-plus-1:before { content: "\f11a"; }
+.flaticon-more:before { content: "\f11b"; }
+.flaticon-icon-1828919:before { content: "\f11c"; }
+.flaticon-cancel:before { content: "\f11d"; }
+.flaticon-cancel-1:before { content: "\f11e"; }
+.flaticon-error:before { content: "\f11f"; }
+.flaticon-error-1:before { content: "\f120"; }
+.flaticon-share:before { content: "\f121"; }
+.flaticon-share-1:before { content: "\f122"; }
+.flaticon-view:before { content: "\f123"; }
+.flaticon-eye:before { content: "\f124"; }
+.flaticon-invisible:before { content: "\f125"; }
+.flaticon-right-arrow:before { content: "\f126"; }
+.flaticon-right-arrow-1:before { content: "\f127"; }
+.flaticon-left-arrow:before { content: "\f128"; }
+.flaticon-left-arrow-1:before { content: "\f129"; }
+.flaticon-loupe-2:before { content: "\f12a"; }
+.flaticon-lock:before { content: "\f12b"; }
+.flaticon-lock-1:before { content: "\f12c"; }
+.flaticon-refresh:before { content: "\f12d"; }
+.flaticon-shopping-bag-1:before { content: "\f12e"; }
+.flaticon-add-group:before { content: "\f12f"; }
+    
+    $font-Flaticon-shopping-bag: "\f100";
+    $font-Flaticon-smartphone-call: "\f101";
+    $font-Flaticon-mail: "\f102";
+    $font-Flaticon-search: "\f103";
+    $font-Flaticon-magnifying-glass: "\f104";
+    $font-Flaticon-loupe: "\f105";
+    $font-Flaticon-loupe-1: "\f106";
+    $font-Flaticon-checked: "\f107";
+    $font-Flaticon-tick: "\f108";
+    $font-Flaticon-checked-1: "\f109";
+    $font-Flaticon-checked-2: "\f10a";
+    $font-Flaticon-tick-1: "\f10b";
+    $font-Flaticon-check: "\f10c";
+    $font-Flaticon-icon-61222: "\f10d";
+    $font-Flaticon-user: "\f10e";
+    $font-Flaticon-user-1: "\f10f";
+    $font-Flaticon-user-2: "\f110";
+    $font-Flaticon-heart: "\f111";
+    $font-Flaticon-heart-1: "\f112";
+    $font-Flaticon-star-1: "\f113";
+    $font-Flaticon-star-2: "\f114";
+    $font-Flaticon-minus-symbol: "\f115";
+    $font-Flaticon-substract: "\f116";
+    $font-Flaticon-icon-149689: "\f117";
+    $font-Flaticon-minus: "\f118";
+    $font-Flaticon-plus: "\f119";
+    $font-Flaticon-plus-1: "\f11a";
+    $font-Flaticon-more: "\f11b";
+    $font-Flaticon-icon-1828919: "\f11c";
+    $font-Flaticon-cancel: "\f11d";
+    $font-Flaticon-cancel-1: "\f11e";
+    $font-Flaticon-error: "\f11f";
+    $font-Flaticon-error-1: "\f120";
+    $font-Flaticon-share: "\f121";
+    $font-Flaticon-share-1: "\f122";
+    $font-Flaticon-view: "\f123";
+    $font-Flaticon-eye: "\f124";
+    $font-Flaticon-invisible: "\f125";
+    $font-Flaticon-right-arrow: "\f126";
+    $font-Flaticon-right-arrow-1: "\f127";
+    $font-Flaticon-left-arrow: "\f128";
+    $font-Flaticon-left-arrow-1: "\f129";
+    $font-Flaticon-loupe-2: "\f12a";
+    $font-Flaticon-lock: "\f12b";
+    $font-Flaticon-lock-1: "\f12c";
+    $font-Flaticon-refresh: "\f12d";
+    $font-Flaticon-shopping-bag-1: "\f12e";
+    $font-Flaticon-add-group: "\f12f";

@@ -1,0 +1,263 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    //rating
+    .rating-summary {
+        .dflex;
+        align-items: center;
+        .rating-result {
+            position: relative;
+            &:before,> span:before {
+                font-size: 1.2rem;
+                height: 12px;
+                display: block;
+                line-height: 12px;
+                font-weight: 400;
+                letter-spacing: 5px;
+            }
+            &:before {
+                content: "\f006" "\f006" "\f006" "\f006" "\f006";
+                font-family: @fontawesome;
+                color: #ccc;
+                z-index: 1;
+                position: absolute;
+                
+            }
+            > span {
+                overflow: hidden;
+                display: block;
+                &:before {
+                    content: "\f005" "\f005" "\f005" "\f005" "\f005";
+                    font-family: @fontawesome;
+                    color: #f2c800;
+                    z-index: 2;
+                    position: relative;
+                }
+                span {
+                    .hidden-visibility();
+                }
+            }
+        }
+        .label,
+        .rating-label{
+            margin-right: 10px;
+            min-width: 50px;
+        }
+    }
+    .review-field-ratings {
+        .nested {
+            display: table;
+        }
+        .review-field-rating {
+            display: table-row;
+            .label,
+            .control {
+                display: table-cell;    
+            }
+            .label {
+                padding-bottom: 10px;   
+            }
+            .control {
+                position:relative;
+                &:before,label:before{
+                    .rating-star();
+                }
+                &:before {                   
+                    color: #dfdfdf;
+                    content: "\f006" "\f006" "\f006" "\f006" "\f006";                   
+                    z-index: 1;                   
+                }               
+                input[type=radio],
+                span {
+                   .hidden-visibility();
+                }
+                label {
+                    color: #f2c800;
+                    display: block;
+                    margin-bottom: 0;
+                    &:before {                      
+                        opacity: 0; 
+                    }
+                    &:hover {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+                input[type=radio] {
+                    &:checked+label {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                    &:focus+label {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .rating-1 {
+                    &:before {
+                        content: "\f005";
+                        z-index: 5;
+                    }
+                }
+                .rating-2 {
+                    &:before {
+                        content: "\f005" "\f005";
+                        z-index: 4;
+                    }
+                }
+                .rating-3 {
+                    &:before {
+                        content: "\f005" "\f005" "\f005";
+                        z-index: 3;
+                    }
+                }
+                .rating-4 {
+                    &:before {
+                        content: "\f005" "\f005" "\f005" "\f005";
+                        z-index: 2;
+                    }
+                }
+                .rating-5 {
+                    &:before {
+                        content: "\f005" "\f005" "\f005" "\f005" "\f005";
+                        z-index: 1;
+                    }
+                }                
+            }
+        }
+    }  
+    .reviews-actions{
+        .action{
+            &:before{
+                content:"(";
+            }
+            &:after{
+                content:")";
+            }
+        }
+    }
+}
+
+
+/* responsive */
+& when (@media-common = true) {    
+  
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+           
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+         
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+      
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {
+ 
+    .rtl {
+        .product-item {
+            .product-reviews-summary {
+                .rating-summary {
+                    margin:0 0 0 4px;
+                }
+            }
+        } 
+        .rating-summary {
+            .label, .rating-label {
+                margin-right:0;
+                margin-left:10px;
+            }
+        }         
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

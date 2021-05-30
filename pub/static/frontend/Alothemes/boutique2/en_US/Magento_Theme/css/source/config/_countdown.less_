@@ -1,0 +1,199 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    //countdown
+    .slogan-countdown {
+        display: block;
+        font-size: 1.5rem;
+        color: #383838;
+        line-height: 25px;
+        text-align: center;
+        margin-top: 13px;
+    }
+    .alo-count-down {    
+        clear: both;
+        text-align: center;
+        margin-top: 12px;
+        margin-bottom: 26px;
+        .countdown {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        } 
+        .timer-box {
+            display:inline-block;
+            width:82px;
+            height:82px;
+            border:2px solid #eaeaea;
+            padding-top:17px;
+            &:not(:first-child){
+                margin-left: 20px;
+            } 
+            span{
+                display: block;  
+            }                 
+            b {               
+                font-size: 3rem;
+                display: inline-block;  
+                font-weight: 600;
+                text-align: center; 
+                position: relative;   
+                color:@text-hover;
+                line-height:1;
+            }
+            &:last-child{
+                b:before{
+                    display: none;
+                }
+            }
+            .title {
+                text-transform:capitalize;
+                font-size: 1.2rem;
+                font-weight: 400;  
+                color: #666666;
+                line-height:1;
+            } 
+        }
+    }
+}
+
+
+/* responsive */
+
+& when (@media-common = true) {   
+   
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .alo-count-down {
+            .timer-box{
+                width:70px;
+                height:70px;
+                padding-top:10px;
+                &:not(:first-child){
+                    margin-left:10px;
+                }
+            }
+        }
+           
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+         
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+      
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .alo-count-down {
+            .timer-box{
+                width:55px;
+                height:55px;
+                padding-top:7px;
+                b{
+                    font-size:2rem;
+                }
+            }
+        }
+
+    }   
+}
+
+
+& when (@media-common = true) {  
+    .rtl {
+        //countdown
+        .alo-count-down {
+            .timer-box {
+                .title{
+                    margin-left: 0;
+                    margin-right: 5px;
+                }
+                &:not(:first-child){
+                    margin-left: 0;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

@@ -1,0 +1,496 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+
+@import 'module/_collapsible_navigation.less';
+
+@message-global-note__color: @text__color;
+@message-global-note__background: @color-yellow-light2;
+@message-global-note__border-color: @color-yellow-light3;
+
+@message-global-note-link__color: @link__color;
+@message-global-note-link__color-hover: @link__hover__color;
+@message-global-note-link__color-active: @link__active__color;
+
+@message-global-caution__color: @color-white;
+@message-global-caution__background: @color-red9;
+@message-global-caution__border-color: none;
+
+@message-global-caution-link__color: @link__color;
+@message-global-caution-link__color-hover: @link__hover__color;
+@message-global-caution-link__color-active: @link__active__color;
+
+@header__background-color: false;
+@header-icons-color: @color-gray56;
+@header-icons-color-hover: @color-gray20;
+
+@addto-color: @text__color__muted;
+@addto-hover-color: @primary__color;
+@minicart-icons-color: @header-icons-color;
+@minicart-icons-color-hover: @header-icons-color-hover;
+
+@button__shadow: inset 0 2px 1px rgba(0,0,0,.12);
+
+@h1__margin-bottom__desktop: @indent__xl;
+
+//
+//  Footer
+//  ---------------------------------------------
+
+@footer__background-color: false;
+
+//
+//    Common
+//--------------------------------------
+
+& when (@media-common = true) {
+
+body {
+    .lib-css(background-color, @page__background-color);
+}
+
+//
+//    Header
+//--------------------------------------
+.page-header {
+    .lib-css(background-color, @header__background-color);
+    border-bottom: 1px solid @border-color__base;
+    margin-bottom: @indent__base;
+}
+
+.header {
+    &.content {
+        padding-top: @indent__s;
+        position: relative;
+        &:extend(.abs-add-clearfix all);
+    }
+}
+
+.logo {
+    position: relative;
+    z-index: 5;
+    float: left;    
+    margin: 0 0 @indent__s @indent__xl;
+    img {        
+        display: block;
+    }
+   .page-print & {
+        float: none;
+    }
+}
+
+.page-main {
+    > .page-title-wrapper {
+        .page-title + .action {
+            margin-top: @indent__l;
+        }
+    }
+}
+
+.action.skip {
+    &:not(:focus) {
+        .hidden-visibility();
+    }
+    &:focus {
+        position: absolute;
+        z-index: 15;
+        box-sizing: border-box;
+        width: 100%;
+        left: 0;
+        top: 0;
+        text-align: center;
+        .lib-css(background, @color-gray94);
+        .lib-css(padding, @indent__s);
+    }
+}
+
+//
+//  Global notice
+//--------------------------------------
+
+
+
+//
+//  Footer
+//--------------------------------------
+
+.page-footer {
+    margin-top: auto;
+    .lib-css(background-color, @footer__background-color);
+}
+
+.footer {
+    &.content {
+        ul {
+            &:extend(.abs-reset-list all);
+        }
+        .links {
+            > li {
+                margin: 0 0 8px;
+            }
+        }
+        .switcher-store {
+            margin: 0 0 30px;
+        }
+    }
+}
+
+.page-header,
+.page-footer {
+    .switcher {
+        .options {
+            ul.dropdown {
+                a {
+                    display: block;
+                    padding: 8px;
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+        li {
+            margin: 0;
+            font-size: @font-size__s;
+        }
+        .label {
+            .hidden-visibility();
+        }
+        strong {
+            font-weight: @font-weight__regular;
+        }
+    }
+}
+
+//
+//    Widgets
+//--------------------------------------
+.sidebar {
+    .widget.block:not(:last-child),
+    .widget:not(:last-child) {
+        &:extend(.abs-margin-for-blocks-and-widgets all);
+    }
+}
+
+.widget {
+    clear: both;
+    .block-title {
+        &:extend(.abs-block-title all);
+    }
+}
+
+}
+
+//
+//    Desktop
+//--------------------------------------
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
+
+    html,
+    body {
+        height: 100%; // stretch screen area for sticky footer
+    }
+
+    .page-wrapper {
+        .lib-vendor-prefix-flex-direction(column);
+        min-height: 100%; // stretch content area for sticky footer
+        > .breadcrumbs,
+        > .top-container,
+        > .widget {
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .ie10 &,
+        .ie11 & {
+            height: 100%;
+        }
+    }
+
+    .navigation ul {
+        padding: 0 8px;
+    }
+
+    .header {
+        &.panel {
+            > .header.links {
+                float: right;
+                font-size: 0;
+                .lib-list-inline();
+                > li {
+                    font-size: @font-size__base;
+                    margin: 0 0 0 15px;
+                    &.welcome,
+                    a {
+                        line-height: 1.4;
+                    }
+                    &.welcome {
+                        a {
+                            .lib-css(padding-left, @indent__xs);
+                        }
+                    }
+                }
+                margin-left: auto;
+            }
+        }
+        &.content {
+            padding: @indent__l @indent__base 0;
+            &:extend(.abs-add-clearfix-desktop all);
+        }
+    }
+    .header {
+        .header-content {
+            .row {
+                align-items:center;
+            }
+        }
+    }
+    .page-header {
+        border: 0;
+        margin-bottom: 0;
+        .panel.wrapper {
+            border-bottom: 1px solid @secondary__color;
+        }
+        .header.panel {
+            padding-top: @indent__s;
+            padding-bottom: @indent__s;
+            &:extend(.abs-add-clearfix-desktop all);
+        }
+        .switcher {
+            display: inline-block;
+			vertical-align: top;
+        }
+    }
+
+    .page-main {
+        > .page-title-wrapper {
+            .page-title {
+                display: inline-block;
+            }
+            .page-title + .action {
+                float: right;
+                margin-top: @indent__base;
+            }
+        }
+    }
+    .footer {
+        &.content {
+            .block {
+                float: right;
+            }
+            .links {
+                display: inline-block;
+                vertical-align: top;
+                margin-bottom: 20px;
+                padding: 0 50px 0 0;
+            }
+            .switcher.store {
+                display: inline-block;
+                padding-right: 50px;
+                vertical-align: top;
+            }
+        }
+        .copyright {
+            &:extend(.abs-add-clearfix all);
+        }
+    }
+}
+
+//
+//    Common
+//--------------------------------------
+
+& when (@media-common = true) {
+
+.no-display {
+    &:extend(.abs-no-display all);
+}
+
+// Calendar
+.ui-datepicker td {
+    padding: 0;
+}
+
+}
+
+
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) { 
+    * {
+        min-width: 0;
+        min-height: 0;
+    } 
+    @media (min-width: 1280px){
+        .container{
+            max-width:1200px;
+        }
+    }
+}
+
+
+
+/* responsive */
+@screen__xxs: 320px;
+@screen__xs-m: 360px;
+@screen__xs: 480px;
+@screen__ss: 576px;
+@screen__s: 640px;
+@screen__m: 768px;
+@screen__xm: 992px;
+@screen__l: 1024px;
+@screen__xl-m: 1200px;
+
+& when (@media-common = true) { 
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+      
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+       
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+             
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){         
+       
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {
+    * {
+      min-width: 0;
+      min-height: 0;
+  }
+    body.rtl,.rtl .main,.rtl select,.rtl input,.rtl textarea{text-align: right;}
+    body.rtl {direction: rtl;}
+    .rtl {
+       
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+           
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}
+
+@import 'config/_reset';
+@import 'config/_variable';
+@import 'config/_mixin';
+@import 'config/_animation';
+@import 'config/_button';
+@import 'config/_config';
+@import 'config/_countdown';
+@import 'config/_label';
+@import 'config/_loading';
+@import 'config/_progessbar';
+@import 'config/_rating';
+@import 'config/_search';
+@import 'config/_swatch';
+@import 'config/_tab';
+
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_layout';
+@import 'layout/_breadcrumb';
+@import 'layout/_toolbar';
+@import 'layout/_slider';
+@import 'layout/_sidebar';
+@import 'layout/_social';
+@import 'layout/_popup';
+@import 'layout/_product';
+@import 'layout/_newsletter';
+@import 'layout/_menu.less';
+
+@import 'pages/_home';
+@import 'pages/_category';
+@import 'pages/_detail';
+@import 'pages/_cart';
+@import 'pages/_blog';
+@import 'pages/_about';
+@import 'pages/_account';
+@import 'pages/_contact';
+@import 'pages/_customer';
+@import 'pages/_error404';
+@import 'pages/_faq';
+@import 'pages/_lookbook';
+@import 'pages/_term';

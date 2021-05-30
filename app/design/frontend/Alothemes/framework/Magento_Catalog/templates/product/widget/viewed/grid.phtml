@@ -1,0 +1,25 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+<?php
+/**
+ * @var $block \Magento\Ui\Block\Wrapper
+ */
+?>
+<?php 
+    $_aloHelper = $this->helper('Magiccart\Alothemes\Helper\Data');
+    // $layout = '.page-layout-' .$block->getLayout()->getUpdate()->getPageLayout();
+    $layout = $_aloHelper->getPageLayout() ? '.page-layout-' .$_aloHelper->getPageLayout() : '.page-layout-' .$block->getLayout()->getUpdate()->getPageLayout();
+    echo $_aloHelper->getGridStyle("$layout .block-viewed-products-grid .product-items .product-item", 'alothemes/grid_widget'); // Config Product Grid
+?>
+<?= /* @escapeNotVerified */ $block->renderApp([
+    'widget_columns' => [
+        'displayMode' => 'grid'
+    ],
+    'image' => [
+        'imageCode' => 'recently_viewed_products_grid_content_widget'
+    ]
+]);

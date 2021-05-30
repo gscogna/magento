@@ -1,0 +1,45 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+& when (@media-common = true) {
+    .message.global.cookie.magepow-gdpr-cookie-notice {
+        .close-cookie{
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            line-height: 28px;
+            background-color: transparent;
+            border: none;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            font-weight: 400;
+            transition: all 0.3s ease-in-out;
+            &:before{
+                content: "\e680";
+                font-family: 'Pe-icon-7-stroke';
+                font-size: 30px;
+            }
+            &:hover{
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            span{
+                display: none;
+            }
+        }
+    }
+}
+
+/* right to left */
+& when (@media-common = true) {
+    .rtl{
+        .message.global.cookie.magepow-gdpr-cookie-notice .close-cookie {
+            right: auto;
+            left: 3px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog post next and prev post links
+ *
+ * @var $block \Magefan\Blog\Block\Post\View\NextPrev
+ */
+?>
+
+<?php if ($block->displayLinks()) { ?>
+    <?php
+        $prevPost = $this->getPrevPost();
+        $nextPost = $this->getNextPost();
+    ?>
+    <?php if ($prevPost || $nextPost) { ?>
+        <div class="post-nextprev-hld post-actions clearfix">
+            <?php if ($prevPost) { ?>
+                <?php $title = $block->escapeHtml($prevPost->getTitle()) ?>
+                <div class="prev-action action">
+                    <a class="nextprev-link prev-link" href="<?php echo $prevPost->getPostUrl() ?>" title="<?php echo __('Read %1',$title) ?>">
+                        <?php echo __('Previous') ?>
+                    </a>
+                </div>
+            <?php } ?>
+            <?php if ($nextPost) { ?>
+                <?php $title = $block->escapeHtml($nextPost->getTitle()) ?>
+                <div class="next-action action">
+                    <a class="nextprev-link next-link" href="<?php echo $nextPost->getPostUrl() ?>" title="<?php echo __('Read %1',$title) ?>">
+                        <?php echo __('Next') ?>
+                    </a>
+                </div>
+                
+            <?php } ?>
+        </div>
+    <?php } ?>
+<?php } ?>

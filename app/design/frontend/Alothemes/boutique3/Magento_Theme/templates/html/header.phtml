@@ -1,0 +1,61 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+?>
+<?php 
+$_lazyHelper 		= $this->helper('Magiccart\Alothemes\Helper\Lazyload');
+?>
+<header class="page-header alothemes">
+	<div class="header menu-mobile header-sticker">
+		<div class="header-content">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 item">
+						<div class="header-top-link">
+							<?php echo $this->getChildHtml('store_language'); ?>
+							<?php echo $this->getChildHtml('currency'); ?>
+						</div>					
+					</div>	
+					<div class="col-xl-6 col-md-6 col-7 item">
+						<div class="header-logo">
+							<?php echo $_lazyHelper->notLazyloadImage($this->getChildHtml('logo')); ?>
+						</div>							
+					</div>
+					<div class="col-xl-3 col-md-6 col-5 item">
+						<div class="header-tool">
+							<div class="search-area header-search">
+								<?php echo $this->getChildHtml('top.search'); ?>						
+							</div>
+							<div class="header-account">
+								<div class="toggle-tab">
+									<span class="header-icon user"></span>								
+								</div>
+								<div class="toggle-content">
+									<?php echo $this->getChildHtml('header.links'); ?>
+								</div>
+							</div>
+							<?php echo $this->getChildHtml('minicart'); ?>
+							<span data-action="toggle-topmenu" class="topmenu-close"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="header-bottom">
+				<div class="header-right-menu">
+					<?php echo $this->getChildHtml('navigation.sections'); ?>
+					<?php echo $this->getChildHtml('catalog.topnav'); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>

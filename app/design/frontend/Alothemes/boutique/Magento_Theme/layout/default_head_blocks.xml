@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+		<!-- Fontawesome -->
+		<css src="fonts/fontawesome/css/font-awesome.min.css" />
+		<css src="fonts/linearicons/css/demo.css" />
+		<css src="fonts/flaticon/font/flaticon.css" />
+		<css src="fonts/font-stroke/css/font-stroke.min.css" />
+		<css src="fonts/dripicons-v2/css/webfont.css" />
+		<css src="fonts/latofont/latofonts.css" />
+		<css src="fonts/linecons/style.css" />
+		<css src="fonts/boutique/boutique.css" />
+    </head>
+</page>

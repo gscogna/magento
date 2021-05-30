@@ -1,0 +1,60 @@
+@font-face{font-family:"Boutique";
+src:url('boutique.eot');
+src:url('boutique.eot') format("embedded-opentype"),
+url('boutique.woff') format("woff"),
+url('boutique.ttf') format("truetype"),
+url('boutique.svg') format("svg");font-weight:normal;font-style:normal}[class^="boutique-"]:before,
+[class*=" boutique-"]:before,
+[class^="boutique-"]:after,
+[class*=" boutique-"]:after{
+  font-family:Boutique;
+  font-style:normal;
+  line-height:normal;
+  font-size:inherit
+}
+.boutique{
+  display:inline-block;
+  font-size:inherit;
+  text-rendering:auto;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
+}
+.boutique-search:before{
+  content:"\f100"
+}
+.boutique-heart:before{
+  content:"\f101"
+}
+.boutique-headphone:before{
+  content:"\f102"
+}
+.boutique-reload:before{
+  content:"\f103"
+}
+.boutique-plane:before{
+  content:"\f104"
+}
+.boutique-long-right-arrow:before{
+  content:"\f105"
+}
+.boutique-search-2:before{
+  content:"\f106"
+}
+.boutique-user-2:before{
+  content:"\f107"
+}
+.boutique-cart-2:before{
+  content:"\f108"
+}
+.boutique-boat:before{
+  content:"\f109"
+}
+.boutique-clock:before{
+  content:"\f10a"
+}
+.boutique-gift:before{
+  content:"\f10b"
+}
+.boutique-pin:before{
+  content:"\f10c"s
+}

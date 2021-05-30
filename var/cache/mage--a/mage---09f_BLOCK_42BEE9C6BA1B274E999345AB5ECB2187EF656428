@@ -1,0 +1,31 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1622303914;s:6:"expire";i:1622390314;s:4:"tags";s:79:"09f_BLOCK_HTML,09f_MAGICCART_MAGICPRODUCT,09f_MAGICCART_MAGICPRODUCT_6,09f_MAGE";}
+<div class= "alo-content-965260739 magicproduct autoplay">
+	    <div class="block-title-tabs clearfix">
+    	<span class="toggle-tab mobile" style="display:none"></span>
+	<ul class="magictabs toggle-content clearfix" data-ajax ='{"limit":"10","speed":"1000","timer":"0","cart":"1","compare":"1","wishlist":"1","review":"1"}'>
+	<li class="item " data-type ="featured"><span class ="title">Featured Products</span></li><li class="item loaded activated " data-type ="latest"><span class ="title">Latest Products</span></li><li class="item " data-type ="sale"><span class ="title">Sale Products</span></li>	</ul>
+    </div>
+	<div class="ajax_loading" style="display:none" data-url="http://localhost/magento/magicproduct/index/product/"></div>
+	<div class="box-product-content clearfix">
+		<div class="content-products" 
+					data-autoplay='true'
+					data-arrows='false'
+					data-fade='false'
+					data-center-Mode='false'
+					data-autoplay-Speed='3000'
+					data-dots='false'
+					data-infinite='true'
+					data-padding='0'
+					data-vertical='false'
+					data-vertical-Swiping='false'
+					data-responsive='[{"breakpoint": 1921, "settings": {"slidesToShow": 3}}, {"breakpoint": 1920, "settings": {"slidesToShow": 3}}, {"breakpoint": 1480, "settings": {"slidesToShow": 3}}, {"breakpoint": 1200, "settings": {"slidesToShow": 3}}, {"breakpoint": 992, "settings": {"slidesToShow": 2}}, {"breakpoint": 768, "settings": {"slidesToShow": 2}}, {"breakpoint": 576, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}, {"breakpoint": 361, "settings": {"slidesToShow": 1}}, {"breakpoint": 1, "settings": {"slidesToShow": 1}}]'
+					data-rows='2'
+					data-slides-To-Show='3'
+		        
+		>
+		<div class="mage-magictabs mc-latest">
+    <div class="message info empty"><div>We can't find products matching the selection.</div></div>
+</div>
+		</div>
+	</div>
+</div>

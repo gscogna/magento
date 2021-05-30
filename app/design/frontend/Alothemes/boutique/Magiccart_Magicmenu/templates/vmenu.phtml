@@ -1,0 +1,57 @@
+<?php
+/**
+ * Magiccart 
+ * @category 	Magiccart 
+ * @copyright 	Copyright (c) 2014 Magiccart (http://www.magiccart.net/) 
+ * @license 	http://www.magiccart.net/license-agreement.html
+ * @Author: DOng NGuyen<nguyen@dvn.com>
+ * @@Create Date: 2016-02-08 22:57:12
+ * @@Modify Date: 2016-07-04 17:44:11
+ * @@Function:
+ */
+ ?>
+<?php
+
+// $_aloHelper = $this->helper('Magiccart\Magicmenu\Helper\Data');
+// var_dump($_aloHelper->getConfig('magicmenu'));
+
+$vmenu = $this->_sysCfg->vmenu;
+if(!$vmenu['enabled']) return;
+
+// drawMainMenu vs DrowMobileMenu
+$menuHtml = $this->drawMainMenu();
+$mobileMenu = $menuHtml['mobile'];
+$desktop 	= $menuHtml['desktop'];
+$ids  = explode(',', $vmenu['notIncludeNav']);
+foreach ($ids as $id) { unset($desktop[$id]); }
+// drawHomeMenu
+$drawHomeMenu = $vmenu['home'] ? $this->drawHomeMenu() : '';
+// drawMainMenu
+$drawMainMenu = $vmenu['mainCat'] ? implode("\n", $desktop) : '';
+// drawExtMenu ExtraMenu
+$drawExtraMenu = $vmenu['extraCat'] ? $this->drawExtraMenu() : '';
+
+?>
+
+<div class="vmagicmenu clearfix">
+    <div class="block-title block-title-vmagicmenu v-title">
+        <strong>
+        	<span class="vmagicmenu-subtitle"><?php echo __($this->getRootName())?></span>
+            <span class="icon-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </strong>
+    </div>
+	<ul class="nav-desktop vmagicmenu-narrow clearfix">
+		<?php echo $drawHomeMenu ?>
+		<?php echo $drawMainMenu ?>
+		<?php echo $drawExtraMenu ?>
+		<li class="all-cat"><span><?php echo __('All Categories')?></span><span style="display:none"><?php echo __('Close')?></span></li>
+	</ul>
+</div>
+<script type="text/javascript">
+	require(['jquery','magicmenu']);
+</script>
+

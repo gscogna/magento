@@ -1,0 +1,44 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php $_product = $block->getProduct() ?>
+<?php if ($block->canEmailToFriend()): ?>
+    <a href="<?php /* @escapeNotVerified */ echo $this->helper('Magento\Catalog\Helper\Product')->getEmailToFriendUrl($_product) ?>"
+       class="action mailto friend"><!-- <i class="pe-7s-mail icons"></i> --><span><?php /* @escapeNotVerified */ echo __('Email') ?></span></a>
+<?php endif; ?>
+<div class="delivery-return">
+    <a class="delivery-return-text"><?php echo __('Delivery & Return') ?></a>
+    <div id="delivery-return-popup" style="display: none;"><?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('delivery_and_return')->toHtml();?></div>
+</div>
+<?php $slash2 = '//'; ?>
+<div class="alo-social-links socials clearfix addit">
+    <div class="custom-html">
+        <h3 class="title-social"><?php /* @escapeNotVerified */ echo __('Share it:') ?></h3>
+        <ul class="icon-share list-inline">
+            <li class="facebook">
+                <a class="trasition-all social-link facebook" title="<?php echo __('Share on Facebook') ?>" href="#" target="_blank" rel="nofollow" onclick="window.open('<?php echo $slash2 ?>www.facebook.com/sharer/sharer.php?u='+'<?php echo $_product->getProductUrl();?>&picture=<?php echo $_product->getImageUrl();?>');return false;"><em class="fa fa-facebook"><span class="hidden"><?php /* @escapeNotVerified */ echo __('facebook') ?></span></em>
+                </a>
+            </li>
+            <li class="twitter">
+                <a class="trasition-all social-link twitter" href="#" title="<?php echo __('Share on Twitter') ?>" rel="nofollow" target="_blank" onclick="window.open('<?php echo $slash2 ?>twitter.com/share?text=<?php echo $_product->getName();?>&amp;url=<?php echo $_product->getProductUrl();?>');return false;"><em class="fa fa-twitter"><span class="hidden"><?php /* @escapeNotVerified */ echo __('twitter') ?></span></em>
+                </a>
+            </li>
+            <li class="pinterest">
+                <a class="trasition-all social-link pinterest" href="#" title="<?php echo __('Pin this') ?>" rel="nofollow" target="_blank" onclick="window.open('<?php echo $slash2 ?>pinterest.com/pin/create/button/?url=<?php echo $_product->getProductUrl();?>&amp;media=http%3A%2F%2Fdemo.cactusthemes.com%2Fnewstube%2Fwp-content%2Fuploads%2F2015%2F06%2F014-Surf-woman.jpg&amp;description=<?php echo $_product->getName();?>');return false;"><em class="fa fa-pinterest"><span class="hidden"><?php /* @escapeNotVerified */ echo __('pinterest') ?></span></em>
+                </a>
+            </li>
+            <li class="linkedin">
+                <a class="trasition-all social-link linkedin" href="#" title="<?php echo __('Share on LinkedIn') ?>" rel="nofollow" target="_blank" onclick="window.open('<?php echo $slash2 ?>www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $_product->getProductUrl();?>&amp;title=<?php echo $_product->getName();?>');return false;"><em class="fa fa-linkedin"><span class="hidden"><?php /* @escapeNotVerified */ echo __('linkedin') ?></span></em>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+

@@ -1,0 +1,110 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1622303913;s:6:"expire";i:1622390313;s:4:"tags";s:77:"09f_BLOCK_HTML,09f_MAGICCART_MAGICSLIDER,09f_MAGICCART_MAGICSLIDER_5,09f_MAGE";}
+<style type="text/css">.magicslider-caption {display: none;} .magicslider-caption.mobile.desktop{display: block;}</style>
+<div class="alo-content-60b264a968a26">
+    <div class="magicslider grid-slider mainslider"
+            data-autoplay='true'
+            data-arrows='true'
+            data-autoplay-Speed='10000'
+            data-speed='300'
+            data-dots='true'
+            data-infinite='true'
+            data-padding='0'
+            data-vertical='false'
+            data-vertical-Swiping='false'
+            data-responsive='[{"breakpoint": 1921, "settings": {"slidesToShow": 1}}, {"breakpoint": 1920, "settings": {"slidesToShow": 1}}, {"breakpoint": 1479, "settings": {"slidesToShow": 1}}, {"breakpoint": 1200, "settings": {"slidesToShow": 1}}, {"breakpoint": 992, "settings": {"slidesToShow": 1}}, {"breakpoint": 768, "settings": {"slidesToShow": 1}}, {"breakpoint": 576, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}, {"breakpoint": 361, "settings": {"slidesToShow": 1}}, {"breakpoint": 1, "settings": {"slidesToShow": 1}}]'
+            data-rows='1'
+            data-slides-To-Show='1'
+      
+    data-lazy-load="ondemand"
+    >
+                    <div class="item image"
+                 
+            >
+                 
+                <a href="">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset=" http://localhost/magento/pub/media/magiccart/magicslider/mobile/m/b/mbslide2_1.jpg ">                        <img class="img-responsive loaded" src="http://localhost/magento/pub/media/magiccart/magicslider/s/l/slide2.jpg" alt="" title="" width="1920" height="743" />
+                    </picture>
+                </a>
+                <div class="magicslider-caption mobile caption-60b264a9ad0e5" ><div class="container figcaption" style=""> 
+  <div class="text-slide text-slide1"> 
+    <h5 class="caption1">Take a fresh look <br> with colored flowing shirt</h5> 
+    <h6 class="caption2">Great fit, Great value! Custom made for only you.</h6> 
+    <div class="caption4"> 
+      <a href="#" class="shop-now" title="shop now" tabindex="0">shop now</a>
+    </div> 
+  </div>
+</div></div><div class="magicslider-caption desktop caption-60b264a9ad0e5" ><div class="container figcaption" style=""> 
+  <div class="text-slide text-slide1"> 
+    <h5 class="caption1">Take a fresh look <br> with colored flowing shirt</h5> 
+    <h6 class="caption2">Great fit, Great value! Custom made for only you.</h6> 
+    <h3 class="caption3">$48.00</h3> 
+    <div class="caption4"> 
+      <a href="#" class="shop-now" title="shop now" tabindex="0">shop now</a>
+    </div> 
+  </div>
+</div></div><style>@media only screen and (max-width: 767px){ .mobile.caption-60b264a9ad0e5{display:block}}@media only screen and (min-width: 768px){ .desktop.caption-60b264a9ad0e5 {display:block}}</style>            </div>
+                    <div class="item image"
+                 
+            >
+                 
+                <a href="">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset=" http://localhost/magento/pub/media/magiccart/magicslider/mobile/m/b/mbslide1_1.jpg ">                        <img class="img-responsive loaded" src="http://localhost/magento/pub/media/magiccart/magicslider/s/l/slide1.jpg" alt="" title="" width="1920" height="743" />
+                    </picture>
+                </a>
+                <div class="magicslider-caption mobile caption-60b264a9ad105" ><div class="container figcaption" style=""> 
+  <div class="text-slide text-slide1"> 
+    <h5 class="caption1">Up your A Grade</h5> 
+    <h6 class="caption2">12 Key pieces, loads of awesome looks. Spin the Style Colorful <br> to build your ultimate back to school arsenal</h6> 
+    <div class="caption4"> 
+      <a href="#" class="shop-now" title="shop now" tabindex="0">shop now</a>
+    </div> 
+  </div>
+</div></div><div class="magicslider-caption desktop caption-60b264a9ad105" ><div class="container figcaption" style=""> 
+  <div class="text-slide text-slide1"> 
+    <h5 class="caption1">Up your A Grade</h5> 
+    <h6 class="caption2">12 Key pieces, loads of awesome looks. Spin the Style Colorful <br> to build your ultimate back to school arsenal</h6> 
+    <div class="caption4"> 
+      <a href="#" class="shop-now" title="shop now" tabindex="0">shop now</a>
+    </div> 
+  </div>
+</div></div><style>@media only screen and (max-width: 767px){ .mobile.caption-60b264a9ad105{display:block}}@media only screen and (min-width: 768px){ .desktop.caption-60b264a9ad105 {display:block}}</style>            </div>
+                    <div class="item image"
+                 
+            >
+                 
+                <a href="">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset=" http://localhost/magento/pub/media/magiccart/magicslider/mobile/m/b/mbslide3_1.jpg ">                        <img class="img-responsive loaded" src="http://localhost/magento/pub/media/magiccart/magicslider/s/l/slide3.jpg" alt="" title="" width="1920" height="743" />
+                    </picture>
+                </a>
+                <div class="magicslider-caption mobile caption-60b264a9ad11c" ><div class="container figcaption" style="">
+  <div class="text-slide text-slide1">
+    <h5 class="caption1">Striped Bermuda Shorts <br> with lace trims</h5>
+    <h6 class="caption2">High waist Bermuda shorts with a matching fabric belt around the waist.</h6>
+    <div class="caption4">
+      <a href="#" class="shop-now" title="shop now" tabindex="0">shop now</a>
+    </div> 
+  </div>
+</div></div><div class="magicslider-caption desktop caption-60b264a9ad11c" ><div class="container figcaption" style="">
+  <div class="text-slide text-slide1">
+    <h5 class="caption1">Striped Bermuda Shorts <br> with lace trims</h5>
+    <h6 class="caption2">High waist Bermuda shorts with a matching fabric belt around the waist.</h6>
+    <h3 class="caption3">$35.00</h3>
+    <div class="caption4">
+      <a href="#" class="shop-now" title="shop now" tabindex="0">shop now</a>
+    </div> 
+  </div>
+</div></div><style>@media only screen and (max-width: 767px){ .mobile.caption-60b264a9ad11c{display:block}}@media only screen and (min-width: 768px){ .desktop.caption-60b264a9ad11c {display:block}}</style>            </div>
+            </div>
+</div>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'gridSlider',
+        ], function($, gridSlider){
+            var el  = $('.alo-content-60b264a968a26');
+            if(el.length) el.gridSlider();
+    });
+</script>

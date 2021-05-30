@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+	    <referenceBlock name="alothemes_header">
+            <block class="Magento\Framework\View\Element\Html\Links" name="header.customlinks">
+                <block class="Magento\Framework\View\Element\Template" name="catalog.compare.link" before="-"
+                       template="Magento_Catalog::product/compare/link.phtml">
+                    <arguments>
+                        <argument name="jsLayout" xsi:type="array">
+                            <item name="components" xsi:type="array">
+                                <item name="compareProducts" xsi:type="array">
+                                    <item name="component" xsi:type="string">Magento_Catalog/js/view/compare-products</item>
+                                </item>
+                            </item>
+                        </argument>
+                    </arguments>
+                </block>
+                 <block class="Magento\Framework\View\Element\Html\Link\Current" name="checkout">
+                    <arguments>
+                        <argument name="label" xsi:type="string" translate="true">Checkout</argument>
+                        <argument name="path" xsi:type="string">checkout</argument>
+                    </arguments>
+                </block> 
+            </block>
+		</referenceBlock>
+        <referenceContainer name="page.wrapper">
+            <container name="block.category" htmlTag="div" htmlClass="cms-static-header container"  after="alothemes_header">
+                <block class="Magento\Cms\Block\Block" name="cms.static.block.header" >
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">cms_static_block_header</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

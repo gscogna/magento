@@ -1,0 +1,193 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    .page-faq{
+        input[type="radio"]{
+            display: none;
+        }
+        .content{
+           height:0;
+           opacity: 0;
+           visibility: hidden;
+           .transition();
+           font-size: 1.3rem;
+           color:#747474;          
+        }
+        input:checked{
+            &~.content{
+                height:auto;
+                opacity: 1;
+                visibility: visible;
+                margin-top: 20px;
+                margin-bottom: 25px;
+            }
+            &~label{
+                cursor: default;
+                font-weight: 600;
+                &:before{
+                    content: "-";
+                    background-color: #303030;
+                    color:#fff;
+                    font-weight: 400;
+                }
+            }
+        }
+        label{
+            font-size: 1.3rem;
+            color:#000;
+            display: block;
+            padding: 13px 0;
+            padding-right: 25px;
+            position: relative;
+            margin-bottom: 0;
+            cursor: pointer;
+            &:before{
+                content: "+";
+                position: absolute;
+                width: 22px;
+                height: 22px;
+                right:0;
+                bottom: 0;
+                background: #e9e9e9;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color:#000;
+            }
+        }  
+        .content-wrapper{
+            &:not(:first-child){
+                label{
+                    border-top: solid 1px #e9e9e9;
+                }
+            }
+        }     
+    }
+}
+
+
+/* responsive */
+@screen__xxs: 320px;
+@screen__xs-m: 360px;
+@screen__xs: 480px;
+@screen__ss: 576px;
+@screen__s: 640px;
+@screen__m: 768px;
+@screen__xm: 992px;
+@screen__l: 1024px;
+@screen__xl-m: 1200px;
+
+& when (@media-common = true) {       
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+       
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+             
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+       
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {
+   
+    .rtl {
+        .page-faq {
+            label{
+                padding-right: 0;
+                padding-left: 23px;
+                &:before{
+                    right: auto;
+                    left:0;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

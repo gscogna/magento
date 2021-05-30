@@ -1,0 +1,209 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    .btn, button.action {
+        font-size: 1.3rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 37px;
+        height:43px;
+    }
+    button.action{
+        font-weight: 700;
+        text-transform: capitalize;
+        padding: 0 20px;
+    }    
+    //BUTTON
+    .actions-toolbar{
+        > .primary {
+            .action{
+                cursor: pointer;
+                margin: 0;
+                padding: 0 50px;
+                line-height: 37px;
+                font-size: 1.4rem;
+                height:43px;
+                color:#000;
+                border:solid 3px @border-color;
+                background: transparent;
+                text-transform: uppercase;
+                font-weight:600;
+                text-align: center;
+                &:hover{
+                    background-color: @border-color;
+                    color: #fff;
+                }
+                span{
+                    display: block;
+                }              
+            }
+        }
+        .secondary {
+            a.action{
+                margin-top: 0;
+                font-size: 1.4rem;
+            }
+            .action.back{
+                display: none;
+            }
+        }
+    }
+    .actions-secondary{
+        a.action{           
+            font-size: 1.4rem;
+            &:hover{
+                color: @base-color;
+            }
+        }
+    }
+    .actions-primary{
+        button.action{
+            .transition(@value: ease, @min: 0.3s)
+        }
+    }    
+    button.button, .cart .continue{
+        display: inline-block;       
+        cursor: pointer;       
+        line-height: 37px;
+        height:43px;
+        padding: 0 20px;
+    }
+    button{
+        border-width:3px;
+        &:hover{
+            border-width:3px;
+        }
+    }
+}
+
+
+/* responsive */
+& when (@media-common = true) {    
+    @media screen and (min-width: (@screen__xl-m + 1)){
+
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+           
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+         
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+       //button
+       .actions-toolbar{
+            .primary{
+                float: none;
+            }
+            > .primary {
+                .action{                    
+                    padding: 0 20px;
+                }
+            }           
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {   
+    .rtl {
+        .actions-toolbar{
+            .primary {
+                .action{
+                    margin: 0 0 0 5px;
+                }
+            }
+        }      
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            .actions-toolbar{
+                .primary {
+                    .action{
+                        margin: 0;
+                    }
+                }
+            } 
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

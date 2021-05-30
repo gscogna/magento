@@ -1,0 +1,68 @@
+<?php
+/**
+ * Magiccart 
+ * @category    Magiccart 
+ * @copyright   Copyright (c) 2014 Magiccart (http://www.magiccart.net/) 
+ * @license     http://www.magiccart.net/license-agreement.html
+ * @Author: Magiccart<team.magiccart@gmail.com>
+ * @@Create Date: 2014-07-18 20:49:45
+ * @@Modify Date: 2018-03-15 00:19:47
+ * @@Function:
+ */
+?>
+<?php
+if(!$this->_sysCfg->general['enabled']) return;
+$socialnetwork = $this->getData('socialnetwork');
+$socialCfg  = $this->_sysCfg->{$socialnetwork};
+$socials    = array('instagram', 'pinterest', 'flickr', 'picasa');
+$selector   = 'socical-' . uniqid();
+$socialfeed = $socialnetwork . '-feed';
+$username   = isset($socialCfg["username"]) ? $socialCfg["username"] : '';
+if(!$username) return;
+$accessToken   = isset($socialCfg["accessToken"]) ? $socialCfg['accessToken'] : '';
+if($accessToken) $accessToken = "accessToken: '$accessToken'";
+$tags       = isset($socialCfg["tags"])    ? $socialCfg["tags"] : '';
+$limit      = isset($socialCfg["limit"])    ? $socialCfg["limit"] : 10;
+?>
+<article class="social-feed clearfix <?php /* @escapeNotVerified */ echo $selector ?> <?php /* @escapeNotVerified */ echo $socialfeed ?>"
+    data-autoplay="false" 
+    data-arrows="false" 
+    data-autoplay-speed="1000" 
+    data-dots="false" 
+    data-infinite="true" 
+    data-padding="15" 
+    data-vertical="false" 
+    data-vertical-swiping="false"
+    data-rows="2" 
+    data-slides-to-show="6" 
+    data-swipe-to-slide="true"
+    data-responsive='[{"breakpoint": 1921, "settings": {"slidesToShow": 6}}, {"breakpoint": 1920, "settings": {"slidesToShow": 6}}, {"breakpoint": 1200, "settings": {"slidesToShow": 4}}, {"breakpoint": 992, "settings": {"slidesToShow": 4}}, {"breakpoint": 768, "settings": {"slidesToShow": 3}}, {"breakpoint": 576, "settings": {"slidesToShow": 2}}, {"breakpoint": 480, "settings": {"slidesToShow": 2}}, {"breakpoint": 361, "settings": {"slidesToShow": 1}}, {"breakpoint": 1, "settings": {"slidesToShow": 1}}]'
+    >
+</article>
+
+<script type="text/javascript">
+    require([
+        'jquery',
+        'magiccart/socialstream',
+        'magiccart/slick',
+        ], function($, socialstream, slick){
+            $('.<?php echo $selector?>').socialstream({
+                socialnetwork: '<?php echo $socialnetwork?>',
+                limit: <?php echo $limit ?>,
+                username: '<?php echo $username ?>',
+                tags: '<?php echo $tags ?>',
+            <?php if($accessToken): ?>
+                <?php echo $accessToken ?>,
+            <?php endif; ?>
+                afterload: function() {
+                    var options = $(this).data();
+                    var el = $(this).find('.social-list');
+                    if( el.length ){
+                        if( !options.vertical && $('body').hasClass('rtl') ) el.attr('dir', 'rtl');
+                        el.slick(options);
+                    }   
+            
+                }
+            }) 
+    });
+</script>

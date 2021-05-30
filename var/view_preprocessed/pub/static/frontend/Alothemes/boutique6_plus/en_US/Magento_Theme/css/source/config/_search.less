@@ -1,0 +1,215 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    //search
+    .form-search{
+        background-color:@white;
+    }
+    body .searchsuite-autocomplete{
+        left:0;
+        top:calc(~"100% + 4px");
+        max-width: 100%;
+        margin-top: 0;
+        ul{
+            max-height: 300px;
+            overflow-y: auto;
+            li {
+                .qs-option-info {
+                    .qs-option-price{
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+        .price-box {
+            .price-container {
+                .price{
+                    font-size: 1.6rem;
+                }
+            }
+            .special-price {
+                .price{
+                    font-size: 1.6rem;
+                }
+            }
+            .old-price {
+                .price{
+                    font-size: 1.1rem;
+                }
+            }
+            .price-from,.price-to{
+                margin: 0;
+                .old-price {
+                    .price{
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+        }
+    }    
+}
+
+
+/* responsive */
+& when (@media-common = true) {    
+  
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        //search
+        body .searchsuite-autocomplete {            
+            ul{
+                max-height: 180px;
+            }
+        }
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+          //search
+        body .searchsuite-autocomplete{
+            width:100%;
+        }  
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+      //search      
+      body .searchsuite-autocomplete{
+        .price-box {
+            .price-container {
+                .price{
+                    font-size: 1.4rem;
+                }
+            }
+            .special-price {
+                .price{
+                    font-size: 1.4rem;
+                }
+            }
+            .old-price {
+                .price{
+                    font-size: 1.1rem;
+                }
+            }
+            .price-from,.price-to{
+                .old-price {
+                    .price{
+                        font-size: 1.4rem;
+                    }
+                }
+            }
+        }
+    } 
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+          //search   
+        body {
+            .searchsuite-autocomplete {
+                ul{
+                    li {
+                        .qs-option-image{
+                            display: none;
+                        }
+                        .qs-option-info{
+                            width:100%;
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
+
+
+& when (@media-common = true) {   
+    .rtl {
+            
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+            .searchsuite-autocomplete {
+                ul{
+                    li {
+                        .qs-option-info{
+                            padding-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

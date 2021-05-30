@@ -1,0 +1,56 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Product media data template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Gallery
+ */
+?>
+<?php
+    $gallery  = json_decode( $block->getGalleryImagesJson(), true );
+?>
+<div class="gallery-placeholder" data-gallery-role="gallery-placeholder">
+    <div class="gallery-items">
+        <?php foreach ($gallery as $shot) : ?>
+            <div class="fotorama__stage">
+                <div class="fotorama__active">
+                    <img src="<?php echo $shot['img'] ?>"  data-src="<?php echo $shot['full'] ?>" alt="<?php echo $shot['caption'] ?>">
+                </div>                
+            </div>
+        <?php endforeach ?>
+    </div>
+</div>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'magiccart/slick',
+        'magiccart/zoom',
+        'magiccart/sticky',
+        'mage/mage',
+        'domReady!'
+        ], function($, slick, zoom){
+            $( document ).ready(function($) {
+                $('.product.media .fotorama__stage .fotorama__active').addClass('zoomed').zoom({
+                        touch:false
+                    });
+                // $('.product-shop-content').mage('sticky', {
+                //     container: '#maincontent',
+                //     spacingTop: 10
+                // });
+
+                if($(window).width() > 767){
+                    $('.product-shop-content').stick_in_parent({
+                        offset_top: 50
+                    });
+                }
+                
+                // $('.product-shop-content').stick_in_parent();
+            });            
+    });
+</script>

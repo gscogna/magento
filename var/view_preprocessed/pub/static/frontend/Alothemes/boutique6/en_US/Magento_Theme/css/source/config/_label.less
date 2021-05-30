@@ -1,0 +1,79 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common =true) {
+    //LABEL
+    .sticker {
+        position: absolute;
+        top: 10px;
+        z-index: 4;
+        left: 10px;
+
+        .labelnew,
+        .labelsale {
+            margin-bottom: 10px;
+        }
+    }
+
+    .labelnew,
+    .labelsale {
+        display: block;
+        line-height: 23px;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 0 7px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    .cat_label {
+        font-size: 10px !important;
+        font-weight: 700;
+        height: 20px;
+        line-height: 20px;
+        padding: 0 6px;
+        text-transform: uppercase;
+        margin-left: 8px;
+        .round-borders(@radius: 3px)!important;
+
+        &:before{
+            display: none;
+        }
+        &:after {
+            width: 100% !important;
+            height: 100% !important;
+            line-height: 20px;
+            border: 0 !important;
+            padding: 0;
+            display: block !important;
+            content: attr(rel) !important;
+            text-align: center;
+            position: static !important;
+        }
+    }
+}
+
+& when (@media-common =true) {
+    .rtl {
+        //sticker
+        .sticker {
+            left: auto;
+            right: 10px;
+        }
+        .cat_label{
+            margin-left:0;
+            margin-right:8px;
+            float:left;
+        }
+    }
+}

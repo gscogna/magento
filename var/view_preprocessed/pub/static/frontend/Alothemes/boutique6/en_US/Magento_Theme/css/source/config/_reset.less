@@ -1,0 +1,190 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    * {
+        outline: none !important;
+        user-select: none;
+    }  
+    //button,link
+    button,a{ 
+        .transition();         
+        &:hover{
+            text-decoration: none !important;
+        } 
+    }
+    ._keyfocus {
+        * {
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+        }
+    }   
+      //set font title
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+        font-family: Poppins, sans-serif;
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+    }
+    
+    table {
+        th{
+            text-align: left;
+        }
+        .col {
+            width: auto;
+        }
+    }
+    .minicart-wrapper {
+        .action{
+            &.showcart {
+                .counter{
+                    &.empty {
+                        .counter-number{
+                            &:empty{
+                                &:before {
+                                    content: "0";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .toggle-tab{
+        cursor:pointer;
+    }
+     
+}
+
+
+/* responsive */
+& when (@media-common = true) { 
+    @media (min-width: @screen__xl-m) {
+        body {
+            .container {
+                max-width: 1170px;
+                padding-left:0;
+                padding-right:0;
+            } 
+        }
+           
+    }       
+    @media screen and (min-width: (@screen__xl-m + 1)){
+
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+           
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+       
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+        select{
+            width:100%;
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {   
+    .rtl {
+        input[type="checkbox"],input[type="radio"]{
+            margin: 2px 0 0 5px;
+        }
+        select{
+            background-position: left 7px center;
+            padding: 0 12px 0 20px;
+        }
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

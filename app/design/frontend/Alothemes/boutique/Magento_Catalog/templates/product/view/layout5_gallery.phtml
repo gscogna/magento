@@ -1,0 +1,88 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * Product media data template
+ *
+ * @var $block \Magento\Catalog\Block\Product\View\Gallery
+ */
+?>
+<?php
+    $gallery  = json_decode( $block->getGalleryImagesJson(), true );
+    $blankImage    = $this->getViewFileUrl('images/blank.png');
+?>
+<div class="gallery-placeholder" data-gallery-role="gallery-placeholder">
+    <div class="gallery-items"
+        data-autoplay="true" 
+        data-arrows="true" 
+        data-autoplay-speed="6000" 
+        data-dots="false" 
+        data-infinite="true" 
+        data-padding="15" 
+        data-vertical="false" 
+        data-vertical-swiping="false" 
+        data-responsive='[{"breakpoint": 1921, "settings": {"slidesToShow": 3}}, {"breakpoint": 1920, "settings": {"slidesToShow": 3}}, {"breakpoint": 1200, "settings": {"slidesToShow": 3}}, {"breakpoint": 992, "settings": {"slidesToShow": 3}}, {"breakpoint": 768, "settings": {"slidesToShow": 3}}, {"breakpoint": 640, "settings": {"slidesToShow": 1}}, {"breakpoint": 480, "settings": {"slidesToShow": 1}}, {"breakpoint": 361, "settings": {"slidesToShow": 1}}, {"breakpoint": 1, "settings": {"slidesToShow": 1}}]'
+        data-rows="1" 
+        data-slides-to-show="3" 
+        data-swipe-to-slide="false" 
+        data-center-mode="true"
+        data-center-padding='50px'
+        data-focus-on-select="true"
+        data-lazy-load="ondemand"
+    >
+        <?php foreach ($gallery as $shot) : ?>
+            <div class="fotorama__stage">
+                <div class="fotorama__active">
+                    <img src="<?= /* @escapeNotVerified */ $blankImage ?>" data-src="<?php echo $shot['full'] ?>" alt="<?php echo $shot['caption'] ?>" data-lazy="<?php echo $shot['img'] ?>">
+                </div>                
+            </div>
+        <?php endforeach ?>
+    </div>
+</div>
+<!--Fix for jumping content. Loader must be the same size as gallery.-->
+<script>
+    var config = {
+            "width": <?= /* @escapeNotVerified */ $block->getImageAttribute('product_page_image_medium', 'width') ?>,
+            "thumbheight": <?php /* @escapeNotVerified */ echo $block->getImageAttribute('product_page_image_small', 'height')
+                        ?: $block->getImageAttribute('product_page_image_small', 'width'); ?>,
+            "navtype": "<?= /* @escapeNotVerified */ $block->getVar("gallery/navtype") ?>",
+            "height": <?= /* @escapeNotVerified */ $block->getImageAttribute('product_page_image_medium', 'height') ?>
+        },
+        thumbBarHeight = 0,
+        loader = document.querySelectorAll('[data-gallery-role="gallery-placeholder"] [data-role="loader"]')[0];
+
+    if (config.navtype === 'horizontal') {
+        thumbBarHeight = config.thumbheight;
+    }
+
+    loader.style.paddingBottom = ( config.height / config.width * 100) + "%";
+</script>
+<script type="text/javascript">
+    require([
+        'jquery',
+        'alothemes',
+        'magiccart/zoom',
+        'magiccart/sticky',
+        'mage/mage',
+        'domReady!'
+        ], function($, slick, zoom){
+            $( document ).ready(function($) {
+                var slider = $('.gallery-items');
+                if(slider.length) $('head').append(magicproduct(slider, '.item'));
+                $('.product.media .fotorama__stage .fotorama__active').addClass('zoomed').zoom({
+                        touch:false
+                    });
+            });            
+    });
+</script>
+<style type="text/css">
+    .gallery-items {display: none;}
+    .gallery-items.slick-initialized {display: block;}
+    .gallery-items .slick-list .slick-slide{opacity: .2;}
+    .gallery-items .slick-list .slick-slide.slick-center{opacity: 1;}
+</style>

@@ -1,0 +1,55 @@
+a:4:{s:4:"hash";s:0:"";s:5:"mtime";i:1622303908;s:6:"expire";i:1622390308;s:4:"tags";s:99:"09f_CAT_C,09f_STORE_GROUP,09f_BLOCK_HTML,09f_MAGICCART_MAGICMENU,09f_MAGICCART_MAGICMENU_2,09f_MAGE";}
+<nav class="navigation mean-nav navigation-mobile" role="navigation" data-action="navigation">
+	<ul class="nav-mobile" data-alo-init='{"menu":{"responsive":true, "expanded":true, "position":{"my":"left top","at":"left bottom"}}}'>
+				<li class='level0 category-item level-top ext  hasChild parent first dropdown'><a class="level-top" href="http://localhost/magento/#"><span>Pages</span></a><ul class="level0 dropdown category-item submenu">
+	<li class="level1 switcher-option"><a href="http://localhost/magento/new-arrivals/">About us</a></li>
+	<li class="level1 switcher-option"><a href="http://localhost/magento/contact/">Contact us</a></li>
+	<li class="level1 switcher-option hasChild">
+		<a href="http://localhost/magento/lookbook/">Lookbook</a>
+		<ul class="level1 submenu hasChild ">
+			<li class="level2 category-item">
+				<a href="#"><span>Page 1</span></a>
+			</li>
+			<li class="level2 category-item">
+				<a href="#"><span>Page 2<span class="cat_label hot !">hot !</span></span></a>
+			</li>
+			<li class="level2 category-item">
+				<a href="#"><span>Page 3</span></a>
+			</li>
+			<li class="level2 category-item">
+				<a href="#"><span>Page 4</span></a>
+			</li>
+		</ul>
+	</li>
+</ul></li><li class='level0 category-item level-top ext  last dropdown'><a class="level-top" href="http://localhost/magento/blog"><span>Blog</span></a></li>	</ul>
+</nav>
+<div class="magicmenu clearfix">
+	<ul class="nav-desktop sticker"			
+		data-fullwidth="1"
+		data-breakpoint="767"
+		>
+		<li class="level0 category-item level-top dropdown home active"><a class="level-top" href="http://localhost/magento/"><span class="icon fa fa-home"></span><span class="icon-text">Home</span></a></li>				<li class='level0 category-item level-top ext  hasChild parent first dropdown'><a class="level-top" href="http://localhost/magento/#"><span>Pages</span></a><ul class="level0 dropdown category-item submenu">
+	<li class="level1 switcher-option"><a href="http://localhost/magento/new-arrivals/">About us</a></li>
+	<li class="level1 switcher-option"><a href="http://localhost/magento/contact/">Contact us</a></li>
+	<li class="level1 switcher-option hasChild">
+		<a href="http://localhost/magento/lookbook/">Lookbook</a>
+		<ul class="level1 submenu hasChild ">
+			<li class="level2 category-item">
+				<a href="#"><span>Page 1</span></a>
+			</li>
+			<li class="level2 category-item">
+				<a href="#"><span>Page 2<span class="cat_label hot !">hot !</span></span></a>
+			</li>
+			<li class="level2 category-item">
+				<a href="#"><span>Page 3</span></a>
+			</li>
+			<li class="level2 category-item">
+				<a href="#"><span>Page 4</span></a>
+			</li>
+		</ul>
+	</li>
+</ul></li><li class='level0 category-item level-top ext  last dropdown'><a class="level-top" href="http://localhost/magento/blog"><span>Blog</span></a></li>	</ul>
+</div>
+<script type="text/javascript">
+	require(['jquery','magiccart/easing','magicmenu']);
+</script>

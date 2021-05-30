@@ -1,0 +1,142 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    //progress bar
+    .deal-progress {
+        background-color: #e1e1e1;
+        display: block;
+        text-indent: -9999em;
+        font-size: 8px;
+        margin-bottom: 2px;        
+        .round-borders(@radius:30px);
+    }
+    .deal-progress-bar {         
+        .round-borders(@radius:30px);
+        height: 10px;
+        &:extend( .crollbar-run all);
+    }
+    .deal-stock-label {
+        .dflex;
+        justify-content: space-between;
+        margin-bottom: 15px;
+        color: #333;
+        font-size:1.4rem;
+        span {
+            display: inline-block;
+        }
+        // .stock-sold{
+        //     order: 1;
+        // }  
+        // .stock-available{
+        //     order: 2;
+        // }     
+    }   
+}
+
+
+/* responsive */
+& when (@media-common = true) {    
+
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+
+    }
+    @media screen and (max-width: @screen__xs ){ 
+
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {   
+    .rtl {
+
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

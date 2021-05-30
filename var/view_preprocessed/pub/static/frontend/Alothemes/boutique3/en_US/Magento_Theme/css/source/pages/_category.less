@@ -1,0 +1,368 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    .catalog-category-view{     
+        .column.main{
+            > .page-title-wrapper{
+                display: block;
+            }
+            .sku, .sku label{
+                font-size: 1.2rem;
+            } 
+            .price-box{
+                .normal-price{
+                    .price{
+                        // font-size: 1.4rem;
+                        // font-weight: 400;
+                    }
+                }                
+            }            
+            .product-reviews-summary{
+                display: flex;
+                align-items: center;
+                .reviews-actions{
+                    margin-top: 0;
+                }
+            }  
+            .category-product-grid{
+                .product-item{
+                    .product-item-info{
+                        position: relative;
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            left: -1px;
+                            width: 1px;
+                            background-color: #eaeaea;
+                            top: 50%;
+                            transform: translate(0,-50%);
+                            height: 85%;
+                        }
+                    }
+                    &:nth-child(4n+1){
+                        .product-item-info:before{
+                            opacity: 0;
+                        }
+                    }
+                } 
+            }
+        }
+        .page-title-wrapper{
+            .page-title{               
+               margin-top: 10px;   
+               margin-bottom: 30px;           
+            }
+        }
+        .cms-static-mix-custom-product{
+            .product-items{
+                .product-item{
+                    width: 100%;
+                }
+            }
+        }
+        //grid
+        .column.main{
+            .products.wrapper.grid{
+                margin-left: -15px;
+                margin-right: -15px;            
+            } 
+         }       
+        .products.wrapper.list{
+            .price-box{
+                &.price-final_price{
+                    padding-top: 10px;
+                    padding-bottom: 15px;
+                    position: relative;
+                    margin-bottom: 10px;
+                    &:before{
+                        content: "";
+                        width: 26px;
+                        position: absolute;
+                        left:0;
+                        bottom: 0;
+                        height: 2px;
+                        background: #c3c3c3;
+                    }
+                    >.price-box{
+                        padding: 0;
+                        >*{
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            .product-item {
+                .product-item-info {
+                    border: solid 2px #f5f5f5;
+                    display: flex;
+                    flex-wrap: wrap;
+                    &:before,&:after{
+                        display: none;
+                    }
+                    .images-container{
+                        .product-hover{
+                            width:100%;
+                        }
+                    }
+                    .product-item-details{
+                        padding: 0 20px;
+                        padding-top: 25px;
+                       .product.description{
+                            font-style: italic;
+                            line-height: 24px;
+                       }
+                    }
+                }
+                .actions-primary{
+                    width:auto;
+                }
+                .product-item-actions{
+                    margin-top:10px;
+                }
+            }
+            .swatch-attribute-options{
+                margin: 0;
+            }
+        }
+    } 
+    .cms-sale-products{
+        .sale-product-top{
+            text-align:center;
+            margin-top:10px;
+        }
+        .alo-count-down {
+            .timer-box{
+                width:82px;
+                height:82px;
+            }
+        }
+    }
+    .cms-feature-product{
+        .block-products-list{
+            .block-title{
+                font-size: 25px;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    .swatch-option-tooltip .corner, 
+    .swatch-option-tooltip-layered .corner {
+        display: none !important;
+    }
+    .ias-trigger{
+        .load-more{
+            &:extend(.button-decor all);
+            width: auto;
+            display: inline-block;
+            position: static;
+            margin-top: 50px;
+        }        
+    }
+    .ias-noneleft{
+        > em{
+            display:inline-block;
+            width:100%;
+            margin-top: 50px;
+            color:@red;
+        }
+    }
+}
+
+
+/* responsive */
+& when (@media-common = true) {       
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .swatch-option-tooltip {
+            display: none !important;
+        }
+        .catalog-category-view{
+            .column.main {                
+                order: 1;
+            }
+            .columns{
+                display: flex;
+            }
+            .page-title-wrapper {
+                .page-title{
+                }
+            }
+        }
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .catalog-category-view {
+            .column.main {
+                .category-product-grid{
+                    .product-item {
+                        &:nth-child(3n+1){
+                            .product-item-info:before{
+                                opacity: 1;
+                            }
+                        }
+                        &:nth-child(2n+1){
+                            .product-item-info:before{
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }                
+                .category-product-list {
+                    .product-item {
+                        margin: 0 0 80px;
+                        padding: 0;
+                        border-bottom: none;                       
+                    }
+                }
+            } 
+            .products.wrapper.list {
+                .product-item {
+                    .product-item-info {
+                        .product-item-details{
+                           padding-left: 0;
+                           padding-right: 0;
+                        }                       
+                    }
+                }
+            }          
+       }        
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+        .catalog-category-view {
+            .products.wrapper.list {
+                .product-item {
+                    .actions-secondary{
+                        .action{
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .catalog-category-view{            
+            .column.main {              
+                .category-product-grid {
+                    .product-item {
+                        &:nth-child(3n+1) {
+                            .product-item-info:before{
+                                opacity: 0;
+                            } 
+                        }
+                        .product-item-info:before{
+                            opacity: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }   
+}
+
+
+& when (@media-common = true) {
+  
+    .rtl {
+        &.catalog-category-view {
+            .products.wrapper.list {
+                .price-box.price-final_price:before{
+                    left:auto;
+                    right:0;
+                }
+                .product-item {
+                    .actions-secondary{
+                        display: flex;
+                        flex-wrap: wrap;
+                        .action:not(:last-child){
+                            margin-right: 0;
+                            margin-left: 10px;
+                        }
+                    }
+                }
+            }
+        }   
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

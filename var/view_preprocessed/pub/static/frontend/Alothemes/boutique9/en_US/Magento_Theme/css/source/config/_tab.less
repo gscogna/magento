@@ -1,0 +1,254 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    //TABS
+    .block-title-tabs {
+        margin-bottom: 15px;
+        position: relative;
+        border-bottom: solid 1px #dddddd;
+        > .title {
+            float: left;
+            margin-top: -3px;
+            margin-bottom: 0;
+            font-size: 2.2rem;
+            font-weight: bold;
+            color: #333;
+            text-transform: capitalize;
+        }
+        .magictabs {
+            padding-left: 0;
+            margin-bottom: 0;
+            list-style: none;
+            text-align: center;
+            padding-left: 0;
+            .item {
+                display: inline-block;
+                margin-bottom: 0;                     
+                &:first-child~.item{
+                    margin-left: 30px;
+                }
+                .title {
+                	font-size: 1.8rem;                
+                    font-weight: 400;
+                    color: #343f49;
+                    padding-bottom: 15px;
+                    display: inline-block;  
+                    position: relative; 
+                    &:before{
+                        content: "";
+                        position: absolute;
+                        border-bottom: solid 2px #cccccc;
+                        left: 0;
+                        width: 0;
+                        bottom: -1px;
+                        .transition();
+                    }                 
+                }
+                &.activated {
+                    .title {
+                        font-weight: 700;
+                        color: #343f49;  
+                        &:before{                            
+                            width: 100%;
+                        }
+                    }
+                }
+                &:hover{
+                    .title {                        
+                        color: @base-color;
+                        cursor: pointer;
+                        &:before{                            
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .type-product-title,>.title{
+            float: left;
+            font-size: 2.2rem;
+            font-weight: normal;
+            color: @black;
+            margin-top: 0;
+            margin-bottom: 0;
+            position: relative;
+            padding-bottom: 11px;
+            border-bottom: solid 2px @base-color;            
+        }
+        .toggle-tab{
+            display: none;
+            cursor: pointer;
+        }
+    }
+    .style-products {
+    	.owner-product {
+    		margin-bottom: 32px;
+    		.title {
+    			&:extend(.block-title-tabs .magictabs .item .title);
+    			text-align: center;
+    		}
+    	}
+    	.block-title-tabs {
+    		margin-bottom: 32px;
+    		.magictabs {
+    			.item {
+    				margin: 0 2px;
+    				.title {
+    					border: 1px solid transparent;
+					    padding: 9px 25px 8px;
+					    display: block;
+					    box-sizing: border-box;
+					    position: relative;
+					    text-decoration: none;
+					    transition: background .2s ease-in-out,color .2s ease-in-out,border .2s ease-in-out;
+					    box-shadow: none;
+					    background-color: transparent;
+					    color: #878787;
+					    border-radius: 40px !important;
+					    font-size: @body-font-size;
+					    text-transform: capitalize;
+    				}
+    				&.activated,&:hover {
+	                    .title {
+	                    	background-color: transparent;
+						    border: 1px solid #222;
+						    color: #222;
+	                    }
+	                }
+    			}
+    		}
+    	}
+    } 
+}
+
+
+/* responsive */
+@screen__xxs: 320px;
+@screen__xs-m: 360px;
+@screen__xs: 480px;
+@screen__ss: 576px;
+@screen__s: 640px;
+@screen__m: 768px;
+@screen__xm: 992px;
+@screen__l: 1024px;
+@screen__xl-m: 1200px;
+
+& when (@media-common = true) {    
+   
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+           
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+         
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+        //tab
+        .block-title-tabs {
+            .magictabs .item .title, .style-products .owner-product .title{
+                font-size: 1.6rem;
+            }
+            .type-product-title,> .title{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {
+  
+    .rtl {
+        //tab
+        .link-view{
+            right:auto;
+            left:8px;
+        }
+      
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

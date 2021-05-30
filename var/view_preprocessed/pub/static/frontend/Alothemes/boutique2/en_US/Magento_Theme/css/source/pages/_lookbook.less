@@ -1,0 +1,176 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    .page-lookbook{
+        .product-lookbook{
+            margin-bottom:45px;
+            .block-title-tabs{
+                display: none;
+            }
+        }
+        .cms-title{
+            text-align: center;
+            margin-top: 65px;
+            margin-bottom: 45px;
+            .title{
+                font-size: 3rem;
+                font-weight: 600;
+                color:#000;
+                margin-bottom: 12px;
+                text-transform: capitalize;
+            }
+            .text{
+                font-size: 1.4rem;
+                color:#555;
+                margin-bottom: 0;
+            }
+        }
+        .lookbook-content{
+            .title.item{
+                display:none;
+            }
+        }
+    }
+    .cms-lookbook2{
+        .cms-static-block{
+            .block-title-tabs{
+                display:none;
+            }
+            &.block-lookbook-2{
+                margin-top:100px;
+                margin-bottom: 70px;
+            }
+        }
+        .page-lookbook {
+            .cms-title{
+                margin-top:0;
+            }
+        }
+    }
+    .cms-lookbook3{
+        .cms-static-block{
+            .block-title-tabs{
+                display: none;
+            }
+        }
+    }
+}
+
+
+/* responsive */
+& when (@media-common = true) {       
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+       
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .page-lookbook {
+            .lookbook-content {
+                display:none;
+            }
+        }
+             
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+        .page-lookbook {
+            .cms-title {
+                .title{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+
+    }   
+}
+
+
+& when (@media-common = true) {
+  
+    .rtl {
+            
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+           
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

@@ -1,0 +1,280 @@
+// /**
+//  * Copyright © 2015 Magento. All rights reserved.
+//  * See COPYING.txt for license details.
+//  */
+
+//
+//  Blank theme overrides
+//  _____________________________________________
+
+//  Theme file should contain declarations (overrides) ONLY OF EXISTING variables
+//  Otherwise this theme won't be available for parent nesting
+//  All new variables should be placed in local theme lib or local theme files
+
+
+& when (@media-common = true) {    
+    .contact-index-index{       
+        .contact-content{ 
+            border:2px solid @lightgray;
+            h3.block-title{
+                font-weight: 600;
+                text-transform: capitalize;
+                font-size: 3rem;
+                color:@black;
+            }
+            .google-map{
+                position: relative;
+                overflow:hidden;
+                padding-bottom:140%;
+                height: 0;
+                border-right:2px solid @lightgray;
+                iframe{
+                    left:0;
+                    top:0;
+                    height:100%;
+                    width:100%;
+                    position:absolute;
+                }
+            }
+            ul{
+                padding: 0;
+                margin: 0;
+                li{                    
+                    list-style-type: none;
+                }
+            }
+            .contact-list{
+                margin-top: 20px;
+                margin-bottom: 25px;
+                li{
+                    .dflex;
+                    align-items:center;
+                    img{
+                        width:26px;
+                    }
+                    .title{
+                        width:calc(~"100% - 26px");
+                        padding-left:15px;
+                        font-weight:500;
+                    }
+                }
+            }
+        }      
+        .form-primary{
+            padding-top:50px;
+            padding-right:40px;            
+            .field{
+                margin-bottom: 20px;
+                &.required{
+                    label{
+                        &:after{
+                            content:"*";
+                            color:@red;
+                        }
+                    }
+                }
+                &.info{
+                    .dflex;
+                    margin:0 -12px;
+                    .name,
+                    .email{
+                        width:50%;
+                        padding:0 12px;
+                    }
+                }
+                input,
+                textarea{
+                    border-color:@lightgray;
+                    &::placeholder{
+                        color:@body-color;
+                    }
+                }
+            }
+        } 
+        .store-primary{           
+            .text{
+                font-size: 1.4rem;
+                color: @black;
+                a.mail{
+                    color: #0275d8;
+                    &:hover{
+                        color:#014c8c;
+                    }
+                }
+            }
+        }
+        .block-map{
+            margin-top: 23px;
+            margin-bottom: 66px;
+            iframe{
+                max-width: 100%;
+            }
+        } 
+        .fieldset {
+            > .field {
+                > .label{
+                    font-size: 1.4rem;
+                    color:@black;
+                    margin-bottom: 5px;
+                    font-weight: 400;
+                }
+            }
+        }        
+        .column:not(.sidebar-main){
+            .form.contact{
+                width: 100%;
+            }
+        }  
+        .actions-toolbar{           
+            > .primary {
+                .action{
+                    padding:0 40px;
+                }
+            }
+        }      
+    }
+}
+
+
+/* responsive */
+& when (@media-common = true) {       
+    @media screen and (max-width: (@screen__xl-m - 1)){      
+       
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .contact-index-index {
+            .contact-content {
+                .google-map{
+                    padding-bottom: 60%;
+                    border-right:0;
+                }
+            }
+            .form-primary{
+                padding-left: 40px;
+                padding-bottom:50px;
+            }
+        }
+    }
+    @media screen and (min-width: @screen__m){
+
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)){
+
+    }
+    @media screen and (max-width: @screen__m){
+
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+      
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+     
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .contact-index-index {
+            .form-primary{
+                padding:50px 30px;
+                .field{
+                    &.info {
+                        .name, 
+                        .email{
+                            width:100%;
+                        }
+                    }
+                }
+            }
+        }
+              
+    }
+    @media screen and (max-width: @screen__xs ){ 
+        .contact-index-index {
+            .contact-content {
+                h3.block-title{
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .contact-index-index {
+            .form-primary{
+                padding:50px 20px;
+            }
+        }
+
+    }   
+}
+
+
+& when (@media-common = true) {
+    
+    .rtl {
+        &.contact-index-index {
+            .contact-content {
+                .contact-list {
+                    li{
+                        padding-left: 0;
+                        padding-right: 30px;
+                    }
+                    img{
+                        left:auto;
+                        right:0;
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: (@screen__xl-m - 1)){       
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: (@screen__xm - 1)){
+        .rtl{
+          
+        }
+    }
+    @media screen and (min-width: @screen__m){
+        .rtl{
+
+        }
+    }
+    @media screen and (min-width: @screen__m) and (max-width: (@screen__xm - 1)) {
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__m - 1)){
+        .rtl{
+              
+        }
+    }
+    @media screen and (max-width: (@screen__s - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: (@screen__ss - 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs ){
+        .rtl{
+            
+        }
+    }
+    @media screen and (max-width: @screen__xs ) and (min-width: (@screen__xs-m + 1)){
+        .rtl{
+
+        }
+    }
+    @media screen and (max-width: @screen__xs-m ){
+        .rtl{
+
+        }
+    }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+	    <move element="page.main.title" destination="page.top"/>
+        <container name="alo.sectionsbottom" as="alo_sectionsbottom" label="Page Section Container"  htmlTag="div" htmlClass="page-alotheme static_sections_bottom wrap" after="main.content.fix" />
+		<referenceContainer name="slide.showcase">
+            <container name="contact_map" label="Map" htmlTag="div" htmlClass="block-map" after="content">
+                <block class="Magento\Cms\Block\Block" name="block_contact_map">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">block_contact_map</argument>
+                    </arguments>
+                </block>
+            </container>
+        </referenceContainer>
+    </body>
+</page>

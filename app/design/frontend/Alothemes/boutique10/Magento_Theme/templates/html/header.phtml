@@ -1,0 +1,52 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+?>
+<?php
+$_lazyHelper        = $this->helper('Magiccart\Alothemes\Helper\Lazyload');
+?>
+<header class="page-header alothemes">
+    <div class="header">
+        <div class="menu-mobile header-sticker">
+            <div class="header-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 item">
+                            <div class="header-logo">
+                                <?php echo $_lazyHelper->notLazyloadImage($this->getChildHtml('logo')); ?>
+                            </div>
+                            <div class="header-right-menu">
+                                <?php echo $this->getChildHtml('navigation.sections'); ?>
+                                <?php echo $this->getChildHtml('catalog.topnav'); ?>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-6 col-sm-6 col-6 item">
+                            <div class="header-tool">
+                                <div class="search-area">
+                                    <?php echo $this->getChildHtml('top.search'); ?>
+                                </div>
+                                <div class="header-account">
+                                    <div class="toggle-tab">
+                                        <span class="header-icon user"></span>
+                                    </div>
+                                    <div class="toggle-content">
+                                        <?php echo $this->getChildHtml('header.links'); ?>
+                                    </div>
+                                </div>
+                                <?php echo $this->getChildHtml('minicart'); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

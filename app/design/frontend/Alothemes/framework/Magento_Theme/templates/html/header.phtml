@@ -1,0 +1,93 @@
+<?php
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/**
+ * @var \Magento\Theme\Block\Html\Header $block
+ */
+
+?>
+<?php 
+$_lazyHelper = $this->helper('Magiccart\Alothemes\Helper\Lazyload');
+$_aloHelper  = $this->helper('Magiccart\Alothemes\Helper\Data');
+$header 	 = $_aloHelper->getConfigModule('design/header');
+$headerName  = basename($header, ".phtml");
+if($header && $headerName != 'header'){
+	$headerTemplate = 'html/' . $headerName . '.phtml';
+	echo $block->setTemplate($headerTemplate)->toHtml();
+	return;
+}
+?>
+<header class="page-header alothemes">
+    <div class="header">
+        <div class="header-top">
+			<div class="container">
+			    <div class="main-fix bg-white clearfix">
+				    <div class="top-left top-mobile">
+				    	<div class="tool-setting">
+				    	    <div class="header-setting">
+						    	<div class="settting-switcher">
+									<?php echo $this->getChildHtml('store_language'); ?>
+							    </div>
+						    </div>
+						    <div class="header-setting currency_top">
+						    	<div class="settting-switcher">
+							    	<?php echo $this->getChildHtml('currency'); ?>
+							    </div>
+						    </div>
+		    			</div>
+				    </div>
+					<div class="top-right top-mobile">
+						<?php echo $this->getChildHtml('header.links'); ?> 
+						<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('about-social')->toHtml();?>
+					</div>
+				</div>
+			</div>
+		</div>	
+		<div class="header-content">
+			<div class="container">
+			    <div class="main-fix bg-white clearfix">
+					<div class="row clearfix">
+					    <div class="content-logo col-sm-3 col-md-3 col-lg-3">
+							<div class="header-logo">
+								<?php echo $_lazyHelper->notLazyloadImage($this->getChildHtml('logo')); ?>
+							</div>
+						</div>
+						<div class="under-top-bar col-sm-9 col-md-9 col-lg-9">
+							<div class="tool-topsearch toggle-tab-mobile">
+								<span class="toggle-tab mobile" style="display:none"><i class="pe-7s-search icons"></i></span>
+							    <div class="toggle-content">
+									<?php echo $this->getChildHtml('top.search'); ?>
+								</div>
+							</div>
+							<div class="header-icons content-cart">
+								<div class="tool-header">
+								    <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('support')->toHtml();?>
+									<?php echo $this->getChildHtml('minicart'); ?>
+									<?php echo $this->getChildHtml('topWishlist'); ?>
+					    		</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="header-bottom">
+            <div class="header-sticker">
+				<div class="container">
+				    <div class="main-fix bg-white clearfix">
+						<div class="row">
+							<div class="col-sm-12 visible-md-on">
+								<?php echo $this->getChildHtml('navigation.sections'); ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+</header>
